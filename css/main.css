@@ -1,5 +1,6 @@
-header, h1, h2, h3, nav, p, ul, a, article, footer {
+header, h1, h2, h3, nav, p, ul, a, article, footer, form {
     font-family: "Helvetica", "Arial", "sans-serif";
+    font-size: 16px;
     width: auto;
     max-width: 800px;
     margin-left: auto; 
@@ -12,7 +13,7 @@ header{
 
 h1{
     text-align: center;
-    font-size: 24pt
+    font-size: 32px
 }
 
 /* two navigation blocks are used:
@@ -20,6 +21,10 @@ h1{
         another for navigation within the main page */
 
 /* syling shared by both navigation blocks */
+
+nav{
+    font-size: 16px
+}
 
 nav ul li{
     display: inline-block;
@@ -77,7 +82,7 @@ nav ul li a{
 
 h2{
     text-align: center;
-    font-size: 16pt;
+    font-size: 24px;
 }
 
 ul{
@@ -86,7 +91,7 @@ ul{
 
 h3{
     text-align: left;
-    font-size: 12pt;
+    font-size: 16px;
 }
 
 article{
@@ -101,22 +106,13 @@ article li {
 }
 
 footer{
-    width: auto;
-    max-width: 800px;
-    margin-left: auto; 
-    margin-right: auto;
     background-color: lightgray;
 }
 
 /* styling for the contact page */
 
 form{
-    width: auto;
-    max-width: 600px;
-    margin-left: auto; 
-    margin-right: auto;
     padding: 16px;
-    font-family: "Helvetica", "Arial", "sans-serif";
 }
 
 div{
@@ -151,7 +147,7 @@ label span{
     and the button text. To get the edge of the button to line up
     with the rest of the elements, need to use margin-left */
     margin-left: 16px;
-    letter-spacing: 2pt;  /* tried this new property to spread the button lettering a bit and make it clearer */
+    letter-spacing: 2px;  /* tried this new property to spread the button lettering a bit and make it clearer */
     height: 48px;
-    font-size: 16pt; 
+    font-size: 16px; 
 }
