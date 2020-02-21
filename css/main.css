@@ -9,7 +9,7 @@ header{
 h1{
     font-family: "Helvetica", "Arial", "sans-serif";
     text-align: center;
-    text-size-adjust: 18pt;
+    font-size: 24pt
 }
 
 .page-nav{
@@ -54,12 +54,12 @@ nav ul li a{
 
 h2{
     text-align: center;
-    text-size-adjust: 14pt;
+    font-size: 16pt;
 }
 
 h3{
     text-align: left;
-    text-size-adjust: 12pt;
+    font-size: 12pt;
 }
 
 article{
@@ -114,5 +114,8 @@ label span{
 }
 
 #sub-button {
-    margin-left: 16px
+    margin-left: 16px;
+    letter-spacing: 2pt;
+    height: 48px;
+    font-size: 16pt; 
 }
