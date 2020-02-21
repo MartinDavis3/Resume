@@ -49,15 +49,34 @@ nav ul li a{
 
 /* styling for the page-navigation block only */
 .section-nav{
+    width: auto;
+    max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto;
     text-align: left;
 }
 
-.section-nav a{
+.section-nav a, #back-to-top{
+    width: auto;
+    max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: left;
     color: red;
     padding: 16px 16px;
 }
 
+#back-to-top a{
+    color: red;
+    padding: 16px 16px;
+    text-decoration: none; 
+}
+
 .section-nav ul li a:hover, .section-nav ul li a:focus, .section-nav ul li a:active{
+    text-decoration-line: underline;
+}
+
+#back-to-top a:hover, #back-to-top a:focus, #back-to-top a:active{
     text-decoration-line: underline;
 }
 
