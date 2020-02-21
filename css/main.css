@@ -72,6 +72,10 @@ article{
 }
 
 footer{
+    width: auto;
+    max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto;
     background-color: lightgray;
 }
 
@@ -84,9 +88,31 @@ form{
     font-family: "Helvetica", "Arial", "sans-serif";
 }
 
-label{
-    padding-top: 64px;
+div{
+    padding-top: 16px;
     padding-right: 16px;
-    padding-bottom: 64px;
+    padding-bottom: 16px;
     padding-left: 16px;
+}
+
+div label {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+}
+
+#text-message {
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+}
+
+label span{
+    display:none;
+}
+
+#sub-button {
+    margin-left: 16px
 }

@@ -31,32 +31,46 @@
             </nav>
         </header>
         <form action="submit.php" method="POST" id="usrform">
-            <label for=first-name>
-                First name
-                <input type="text" name="first-name" placeholder="Enter your first name...">
-            </label>
-            <label for=last-name>
-                Last name
-                <input type="text" name="last-name" placeholder="Enter your last name...">
-            </label>
-            <label for=email>
-                Email
-                <input type="text" name="email" placeholder="Enter your email...">
-            </label>
-            <label for=phone-number>
-                Phone
-                <input type="tel" name="phone-number" placeholder="Enter your phone number...">
-            </label>
-            <label for="contact-means">
-                Choose your preferred means of contact:
-                <select name="contact-means">
-                    <option value="Email">Email</option>
-                    <option value="Phone">Phone</option>
-                </select>
-            </label>
-            <p>Leave me a brief message.</p>
-            <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="40" rows="4"></textarea>
-            <input type="submit" value="Submit Form" id="sub-button">
+            <div class=entry-items>
+                <label for=first-name>
+                    First name
+                    <input type="text" name="first-name" placeholder="Enter your first name..." aria-describedby="first-name-tip"/>
+                    <span id="first-name-tip" role="tooltip">Please enter your first name</span>
+                </label>
+                    <label for=last-name>
+                    Last name
+                    <input type="text" name="last-name" placeholder="Enter your last name..." aria-describedby="last-name-tip"/>
+                    <span id="last-name-tip" role="tooltip">Please enter your last name</span>
+                </label>
+            </div>
+            <div class=entry-item>
+                <label for=email>
+                    Email
+                    <input type="text" name="email" placeholder="Enter your email..." aria-describedby="email-tip"/>
+                    <span id="email-tip" role="tooltip">Please enter your email address</span>
+                </label>
+                <label for=phone-number>
+                    Phone
+                    <input type="tel" name="phone-number" placeholder="Enter your phone number..." aria-describedby="phone-tip">
+                    <span id="phone-tip" role="tooltip">Please enter your telephone number</span>
+                </label>
+            </div>
+            <div>
+                <label for="contact-means">
+                    Please choose your preferred means of contact:
+                    <select name="contact-means">
+                        <option value="Email">Email</option>
+                        <option value="Phone">Phone</option>
+                    </select>
+                </label>
+            </div>
+            <div ID="text-message">
+                <p>Leave me a brief message.</p>
+                <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="40" rows="4"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit Form" id="sub-button">
+            </div>
         </form>
         <footer>
             Martin J. Davis - Resume
