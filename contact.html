@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Martin Davis - contact</title>
+        <meta author="Martin Davis">
+        <meta charset="UTF-8">
+        <meta description="Resume website for class assignment">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/favicon.png">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Me</h1>
+            <nav>
+                Navigation
+                <ul>
+                    <li>
+                        <a href=./index.html>Home</a>
+                    </li>
+                    <li>
+                        <a href=./education.html>Education</a>
+                    </li>
+                    <li>
+                        <a href=./experience.html>Experience</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <form action="submit.php" method="POST" id="usrform">
+            <label for=first-name>
+                First name
+                <input type="text" name="first-name" placeholder="Enter your first name...">
+            </label>
+            <label for=last-name>
+                Last name
+                <input type="text" name="last-name" placeholder="Enter your last name...">
+            </label>
+            <label for=email>
+                Email
+                <input type="text" name="email" placeholder="Enter your email...">
+            </label>
+            <label for=phone-number>
+                Phone
+                <input type="tel" name="phone-number" placeholder="Enter your phone number...">
+            </label>
+            <label for="contact-means">
+                Choose your preferred means of contact:
+                <select name="contact-means">
+                    <option value="Email">Email</option>
+                    <option value="Phone">Phone</option>
+                </select>
+            </label>
+            <p>Leave me a brief message.</p>
+            <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="40" rows="4"></textarea>
+            <input type="submit" value="Submit Form" id="sub-button">
+        </form>
+        <footer>
+            Martin J. Davis - Resume
+        </footer>
+    </body>
+</html>
