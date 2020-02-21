@@ -1,13 +1,16 @@
-header{
+header, h1, h2, h3, nav, p, ul, a, article, footer {
+    font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
     max-width: 800px;
     margin-left: auto; 
     margin-right: auto;
+}
+
+header{
     background-color: lightgray;
 }
 
 h1{
-    font-family: "Helvetica", "Arial", "sans-serif";
     text-align: center;
     font-size: 24pt
 }
@@ -31,8 +34,6 @@ nav ul li a{
 }
 
 .page-nav{
-    width: auto;
-    max-width: 800px;
     background-color: lightblue;
     margin: 16px auto;
 }
@@ -49,18 +50,10 @@ nav ul li a{
 
 /* styling for the page-navigation block only */
 .section-nav{
-    width: auto;
-    max-width: 800px;
-    margin-left: auto; 
-    margin-right: auto;
     text-align: left;
 }
 
 .section-nav a, #back-to-top{
-    width: auto;
-    max-width: 800px;
-    margin-left: auto; 
-    margin-right: auto;
     text-align: left;
     color: red;
     padding: 16px 16px;
@@ -97,10 +90,6 @@ h3{
 }
 
 article{
-    width: auto;
-    max-width: 800px;
-    margin-left: auto; 
-    margin-right: auto;
     padding: 16px;
     font-family: "Helvetica", "Arial", "sans-serif";
     line-height: 20px;
