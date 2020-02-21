@@ -12,6 +12,24 @@ h1{
     font-size: 24pt
 }
 
+/* two navigation blocks are used:
+        one for navigation between pages
+        another for navigation within the main page */
+
+/* syling shared by both navigation blocks */
+
+nav ul li{
+    display: inline-block;
+}
+
+/* styling for the page-navigation block only */
+
+nav ul li a{
+    text-decoration: none; 
+    display: inline-block;
+    padding: 16px 32px;
+}
+
 .page-nav{
     width: auto;
     max-width: 800px;
@@ -24,21 +42,12 @@ h1{
     padding: 0;
 }
 
-nav ul li{
-    display: inline-block;
-}
-
-nav ul li a{
-    text-decoration: none; 
-    display: inline-block;
-    padding: 16px 32px;
-}
-
 .page-nav ul li a:hover, .page-nav ul ul li a:focus, .page-nav ul ul li a:active{
-    background-color: rgb(21, 0, 139);
+    background-color: rgb(0, 12, 175);
     color:#fff;
 }
 
+/* styling for the page-navigation block only */
 .section-nav{
     text-align: left;
 }
@@ -52,9 +61,15 @@ nav ul li a{
     text-decoration-line: underline;
 }
 
+/* styling for other page elements */
+
 h2{
     text-align: center;
     font-size: 16pt;
+}
+
+ul{
+    padding-left: 16px
 }
 
 h3{
@@ -69,6 +84,12 @@ article{
     margin-right: auto;
     padding: 16px;
     font-family: "Helvetica", "Arial", "sans-serif";
+    line-height: 20px;
+    
+}
+article li {
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 footer{
@@ -78,6 +99,8 @@ footer{
     margin-right: auto;
     background-color: lightgray;
 }
+
+/* styling for the contact page */
 
 form{
     width: auto;
@@ -109,13 +132,18 @@ div label {
     padding-left: 32px;
 }
 
+/* this is used to prevent the ARIA tooltips from displaying.
+They are just spoken when a screen reader is being used. */
 label span{
-    display:none;
+    display: none;
 }
 
 #sub-button {
+    /* padding for the button is between the edge of the button
+    and the button text. To get the edge of the button to line up
+    with the rest of the elements, need to use margin-left */
     margin-left: 16px;
-    letter-spacing: 2pt;
+    letter-spacing: 2pt;  /* tried this new property to spread the button lettering a bit and make it clearer */
     height: 48px;
     font-size: 16pt; 
 }
