@@ -1,6 +1,12 @@
-header, h1, h2, h3, nav, p, ul, a, article, footer, form {
+* {  /* basic browser reset */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px
+}
+
+header, h1, h2, h3, nav, p, ul, a, article, div, footer, form {
     font-family: "Helvetica", "Arial", "sans-serif";
-    font-size: 16px;
     width: auto;
     max-width: 800px;
     margin-left: auto; 
@@ -13,39 +19,42 @@ header{
 
 h1{
     text-align: center;
-    font-size: 32px
+    font-size: 32px;
+    padding-top: 8px;
+    Padding-bottom: 8px;
 }
 
 /* two navigation blocks are used:
-        one for navigation between pages
-        another for navigation within the main page */
+        one for navigation between pages in the website
+        another for navigation between sections within the main page
+    also, a seperate navigation element to go to the top of the page is used */
 
 /* syling shared by both navigation blocks */
-
-nav{
-    font-size: 16px
-}
 
 nav ul li{
     display: inline-block;
 }
 
-/* styling for the page-navigation block only */
-
 nav ul li a{
     text-decoration: none; 
     display: inline-block;
-    padding: 16px 32px;
+    line-height: 32px;
 }
+
+/* styling for the page-navigation block only */
 
 .page-nav{
     background-color: lightblue;
-    margin: 16px auto;
 }
 
 .page-nav ul{
     text-align: center;
-    padding: 0;
+/*    line-height: 32px; */
+}
+
+.page-nav ul li a {
+    padding-right: 16px;
+    padding-left: 16px;
 }
 
 .page-nav ul li a:hover, .page-nav ul ul li a:focus, .page-nav ul ul li a:active{
@@ -53,28 +62,22 @@ nav ul li a{
     color:#fff;
 }
 
-/* styling for the page-navigation block only */
-.section-nav{
+/* styling for the section-navigation block and back-to-top */
+
+.section-nav, #back-to-top {
     text-align: left;
+    padding-top: 16px;
 }
 
-.section-nav a, #back-to-top{
+.section-nav a, #back-to-top a {
     text-align: left;
-    color: red;
-    padding: 16px 16px;
-}
-
-#back-to-top a{
-    color: red;
-    padding: 16px 16px;
     text-decoration: none; 
+    color: red;
+    padding-right: 16px;
 }
 
-.section-nav ul li a:hover, .section-nav ul li a:focus, .section-nav ul li a:active{
-    text-decoration-line: underline;
-}
-
-#back-to-top a:hover, #back-to-top a:focus, #back-to-top a:active{
+.section-nav ul li a:hover, .section-nav ul li a:focus, .section-nav ul li a:active,
+#back-to-top a:hover, #back-to-top a:focus, #back-to-top a:active {
     text-decoration-line: underline;
 }
 
@@ -83,22 +86,24 @@ nav ul li a{
 h2{
     text-align: center;
     font-size: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
-ul{
+article ul{
     padding-left: 16px
 }
 
-h3{
+h3 {
     text-align: left;
     font-size: 16px;
+    padding-top: 8px;
 }
 
-article{
-    padding: 16px;
-    font-family: "Helvetica", "Arial", "sans-serif";
+article {
+    padding-top: 16px;
+    padding-bottom: 16px;
     line-height: 20px;
-    
 }
 article li {
     padding-top: 4px;
@@ -107,6 +112,9 @@ article li {
 
 footer{
     background-color: lightgray;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
 }
 
 /* styling for the contact page */
@@ -133,7 +141,16 @@ div label {
     padding-top: 16px;
     padding-right: 32px;
     padding-bottom: 16px;
-    padding-left: 32px;
+    padding-left: 16px;
+}
+
+#text-message textarea {
+    padding-left: 0;
+    margin-left: 16px;
+}
+
+input {
+    width: 15em;
 }
 
 /* this is used to prevent the ARIA tooltips from displaying.
@@ -149,5 +166,6 @@ label span{
     margin-left: 16px;
     letter-spacing: 2px;  /* tried this new property to spread the button lettering a bit and make it clearer */
     height: 48px;
-    font-size: 16px; 
+    padding-left: 16px;
+    padding-right: 16px;
 }
