@@ -5,7 +5,7 @@
     font-size: 16px
 }
 
-header, h1, h2, h3, nav, p, ul, a, article, div, footer, form {
+header, main, h1, h2, h3, nav, p, ul, a, article, div, footer, form {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
     max-width: 800px;
@@ -31,11 +31,11 @@ h1{
 
 /* syling shared by both navigation blocks */
 
-nav ul li{
+nav ul li {
     display: inline-block;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none; 
     display: inline-block;
     line-height: 32px;
@@ -49,7 +49,6 @@ nav ul li a{
 
 .page-nav ul{
     text-align: center;
-/*    line-height: 32px; */
 }
 
 .page-nav ul li a {
@@ -118,6 +117,8 @@ footer{
 }
 
 /* styling for the contact page */
+/* NB: this uses a lot of different padding to get the elements spaced out
+   reasonably well. There is probably a better way, but it works okay for the moment */
 
 form{
     padding: 16px;
@@ -168,4 +169,6 @@ label span{
     height: 48px;
     padding-left: 16px;
     padding-right: 16px;
+    border-radius: 15px;  /* and this for rounded corners */
+    border-width: 3px;
 }
