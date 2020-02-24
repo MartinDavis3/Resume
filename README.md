@@ -1,2 +1,3 @@
-# Resume-assignment
-Assignment to create a resume website using various types of css styling.
+# My-Resume-Website
+Project to create a website showing my Resume.
+** CURRENTLY UNDER CONSTRUCTION **
