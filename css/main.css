@@ -13,7 +13,17 @@ header, main, h1, h2, h3, nav, p, ul, a, article, div, footer, form {
     margin-right: auto;
 }
 
-header{
+header, .page-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    margin: 0, auto;
+    z-index: 1;
+}
+
+Header {
     background-color: lightgray;
 }
 
@@ -45,6 +55,7 @@ nav ul li a {
 
 .page-nav{
     background-color: lightblue;
+    top: 54px;
 }
 
 .page-nav ul{
@@ -56,9 +67,14 @@ nav ul li a {
     padding-left: 16px;
 }
 
-.page-nav ul li a:hover, .page-nav ul ul li a:focus, .page-nav ul ul li a:active{
+.page-nav ul li a:hover, .page-nav ul li a:focus, .page-nav ul li a:active {
     background-color: rgb(0, 12, 175);
     color:#fff;
+}
+
+#nav-space {
+    padding-left: 64px;
+    padding-right: 64px;
 }
 
 /* styling for the section-navigation block and back-to-top */
@@ -80,7 +96,44 @@ nav ul li a {
     text-decoration-line: underline;
 }
 
+/* styling for social media links */
+
+/* #social-media-links {
+    list-style: none;
+    text-align: right;
+} */
+
+.social-media-links a:hover,
+.social-media-links a:focus,
+.social-media-links a:active {
+    background-color: lightblue;
+}
+
+.social-media-links .fab {
+    background-color: lightblue;
+    color: rgba(50, 50, 50, 1);
+    font-size: 24px;
+    margin-left: 16px;
+    vertical-align: sub;
+    
+}
+
+.social-media-links a:hover .fab,
+.social-media-links a:focus .fab,
+.social-media-links a:active .fab {
+    background-color: lightblue;
+    color: rgba(50, 50, 50, 0.5)
+}
+
 /* styling for other page elements */
+
+main {
+    /* Leave space for fixed header, nav bar and footer
+       Note that have to use padding instead of margins, otherwise page
+       is not positioned correctly when back-to-top link moves to start of main */
+    padding-top: 76px;
+    padding-bottom: 26px;
+}
 
 h2{
     text-align: center;
@@ -110,6 +163,13 @@ article li {
 }
 
 footer{
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0, auto;
+    z-index: 1;
     background-color: lightgray;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -159,6 +219,38 @@ They are just spoken when a screen reader is being used. */
 label span{
     display: none;
 }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+    /* End of text only for screen reader */
 
 #sub-button {
     /* padding for the button is between the edge of the button
