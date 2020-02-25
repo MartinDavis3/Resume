@@ -8,12 +8,11 @@
 header, main, h1, h2, h3, nav, p, ul, a, article, div, footer, section {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
-    /* max-width: 800px; */
-    margin-left: auto; 
-    margin-right: auto;
+    /* margin-left: auto;  */
+    /* margin-right: auto; */
 }
 
-header, .page-nav {
+header {
     position: fixed;
     top: 0;
     right: 0;
@@ -29,58 +28,47 @@ Header {
 
 h1{
     text-align: center;
-    font-size: 32px;
-    padding-top: 8px;
-    Padding-bottom: 8px;
+    font-size: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
 }
 
 nav ul li {
     display: inline-block;
+    text-align: left;
 }
 
-nav ul li a {
+.section-links a {
     text-decoration: none; 
-    display: inline-block;
-    line-height: 32px;
+    line-height: 20px;
+    /* provide space between items */
+    margin-right: 4px;
+    margin-left: 4px;
+    /* also provide some padding so that highlight block on hover is slightly larger than text */
+    padding-right: 4px;
+    padding-left: 4px;
 }
 
-.page-nav{
-    background-color: lightblue;
-    top: 54px;
+.social-media-links a {
+    margin-right: 8px
 }
 
-.page-nav ul{
-    text-align: center;
-}
-
-.page-nav ul li a {
-    padding-right: 16px;
-    padding-left: 16px;
-}
-
-.page-nav ul li a:hover, .page-nav ul li a:focus, .page-nav ul li a:active {
+.section-links a:hover, .page-nav ul li a:focus, .page-nav ul li a:active {
     background-color: rgb(0, 12, 175);
     color:#fff;
 }
 
-#nav-space {
-    padding-left: 64px;
-    padding-right: 64px;
-}
-
 /* styling for social media links */
 
-.social-media-links a:hover,
-.social-media-links a:focus,
-.social-media-links a:active {
-    background-color: lightblue;
-}
-
 .social-media-links .fab {
-    background-color: lightblue;
     color: rgba(50, 50, 50, 1);
-    font-size: 24px;
-    margin-left: 16px;
+    font-size: 20px;
     vertical-align: sub;    
 }
 
@@ -94,28 +82,9 @@ nav ul li a {
 /* styling for other page elements */
 
 main {
-    /* Leave space for fixed header, nav bar and footer
-       Note that have to use padding instead of margins, otherwise page
-       is not positioned correctly when back-to-top link moves to start of main */
-    padding-top: 76px;
+    /* Leave space for fixed header, nav bar and footer. */
+    padding-top: 64px;
     padding-bottom: 26px;
-}
-
-h2{
-    text-align: center;
-    font-size: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-article ul{
-    padding-left: 16px
-}
-
-h3 {
-    text-align: left;
-    font-size: 16px;
-    padding-top: 8px;
 }
 
 article {
@@ -123,10 +92,30 @@ article {
     padding-bottom: 16px;
     line-height: 20px;
 }
+
+h2{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article ul{
+    /* This gives the padding required for the bullet points */
+    padding-left: 16px
+}
+
 article li {
     padding-top: 4px;
     padding-bottom: 4px;
 }
+
+h3 {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
 
 footer{
     position: fixed;
