@@ -5,10 +5,10 @@
     font-size: 16px
 }
 
-header, main, h1, h2, h3, nav, p, ul, a, article, div, footer, form {
+header, main, h1, h2, h3, nav, p, ul, a, article, div, footer, section {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
-    max-width: 800px;
+    /* max-width: 800px; */
     margin-left: auto; 
     margin-right: auto;
 }
@@ -34,13 +34,6 @@ h1{
     Padding-bottom: 8px;
 }
 
-/* two navigation blocks are used:
-        one for navigation between pages in the website
-        another for navigation between sections within the main page
-    also, a seperate navigation element to go to the top of the page is used */
-
-/* syling shared by both navigation blocks */
-
 nav ul li {
     display: inline-block;
 }
@@ -50,8 +43,6 @@ nav ul li a {
     display: inline-block;
     line-height: 32px;
 }
-
-/* styling for the page-navigation block only */
 
 .page-nav{
     background-color: lightblue;
@@ -77,31 +68,7 @@ nav ul li a {
     padding-right: 64px;
 }
 
-/* styling for the section-navigation block and back-to-top */
-
-.section-nav, #back-to-top {
-    text-align: left;
-    padding-top: 16px;
-}
-
-.section-nav a, #back-to-top a {
-    text-align: left;
-    text-decoration: none; 
-    color: red;
-    padding-right: 16px;
-}
-
-.section-nav ul li a:hover, .section-nav ul li a:focus, .section-nav ul li a:active,
-#back-to-top a:hover, #back-to-top a:focus, #back-to-top a:active {
-    text-decoration-line: underline;
-}
-
 /* styling for social media links */
-
-/* #social-media-links {
-    list-style: none;
-    text-align: right;
-} */
 
 .social-media-links a:hover,
 .social-media-links a:focus,
@@ -114,8 +81,7 @@ nav ul li a {
     color: rgba(50, 50, 50, 1);
     font-size: 24px;
     margin-left: 16px;
-    vertical-align: sub;
-    
+    vertical-align: sub;    
 }
 
 .social-media-links a:hover .fab,
@@ -176,44 +142,6 @@ footer{
     padding-left: 8px;
 }
 
-/* styling for the contact page */
-/* NB: this uses a lot of different padding to get the elements spaced out
-   reasonably well. There is probably a better way, but it works okay for the moment */
-
-form{
-    padding: 16px;
-}
-
-div{
-    padding-top: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-}
-
-div label {
-    padding-top: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-}
-
-#text-message {
-    padding-top: 16px;
-    padding-right: 32px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-}
-
-#text-message textarea {
-    padding-left: 0;
-    margin-left: 16px;
-}
-
-input {
-    width: 15em;
-}
-
 /* this is used to prevent the ARIA tooltips from displaying.
 They are just spoken when a screen reader is being used. */
 label span{
@@ -251,16 +179,3 @@ label span{
     z-index: 100000; /* Above WP toolbar. */
 }
     /* End of text only for screen reader */
-
-#sub-button {
-    /* padding for the button is between the edge of the button
-    and the button text. To get the edge of the button to line up
-    with the rest of the elements, need to use margin-left */
-    margin-left: 16px;
-    letter-spacing: 2px;  /* tried this new property to spread the button lettering a bit and make it clearer */
-    height: 48px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 15px;  /* and this for rounded corners */
-    border-width: 3px;
-}
