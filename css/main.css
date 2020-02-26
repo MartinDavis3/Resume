@@ -8,6 +8,10 @@
     margin-left: auto;
 }
 
+body {
+    background-color: darkblue;
+}
+
 header, main, h1, h2, h3, nav, p, ul, a, article, div, footer, section {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
@@ -88,13 +92,11 @@ nav ul li {
 
 main {
     /* Leave space for fixed header, nav bar and footer. */
-    position: relative;
-    top: 72px;
-    /* padding-top: 72px; */
-    padding-bottom: 98px;
+    padding-top: 72px;
     /*small left and right space off edge of screen */
-    margin-left: 6px;
-    margin-right: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: white;
 }
 
 .flexbox {
@@ -107,7 +109,14 @@ main {
 /* Flex items. */
 .flex-item {
     display: block;
-    width: 100%
+    width: 100%;
+}
+
+.flex-item:not(h2) {
+    background-color: lightgreen;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 10px;
 }
 
 /* styling for other page elements */
@@ -119,8 +128,9 @@ section {
 h2{
     text-align: center;
     font-size: 22px;
-    margin-top: 22px;
+    margin-top: calc(22px - 72px);
     margin-bottom: 11px;
+    padding-top: 72px;
 }
 
 section ul{
@@ -203,8 +213,8 @@ label span{
 @media screen and (min-width: 768px) {
 
     main {
-        margin-left: 16px;
-        margin-right:16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .item-4, .item-5, .item-6, .item-7 {
@@ -221,8 +231,8 @@ label span{
 @media screen and (min-width: 1200px) {
 
     main {
-        margin-left: 32px;
-        margin-right:32px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     .item-4, .item-5, .item-6, .item-7 {
