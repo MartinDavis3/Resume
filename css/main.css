@@ -203,13 +203,29 @@ label span{
     }
 
     .item-4, .item-5, .item-6, .item-7 {
-        /* width: calc((100%-3*2em)/4) */
-        width: 45%;
+        width: calc( 50% -  24px);
     }
 
     .item-9, .item-10 {
-        /* width: calc((100%-2em)/2); */
-        width: 45%;
+        width: calc( 50% -  24px );
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+    main {
+        margin-left: 32px;
+        margin-right:32px;
+    }
+
+    .item-4, .item-5, .item-6, .item-7 {
+        width: calc( 25% - 36px);
+    }
+
+    .item-9, .item-10 {
+        width: calc( 50% - 24px);
     }
 
 }
