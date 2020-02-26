@@ -28,7 +28,7 @@ Header {
 
 h1{
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -37,6 +37,8 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: lightblue;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 nav ul li {
@@ -79,43 +81,66 @@ nav ul li {
     color: rgba(50, 50, 50, 0.5)
 }
 
-/* styling for other page elements */
+/* styling for main section and flexbox */
 
 main {
     /* Leave space for fixed header, nav bar and footer. */
-    padding-top: 64px;
+    padding-top: 72px;
     padding-bottom: 26px;
+    /*small left and right space off edge of screen */
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
-article {
-    padding-top: 16px;
-    padding-bottom: 16px;
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Flex items. */
+.flex-item {
+    display: block;
+    width: 100%
+}
+
+/* styling for other page elements */
+
+section {
     line-height: 20px;
 }
 
 h2{
     text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin-top: 22px;
+    margin-bottom: 11px;
 }
 
-article ul{
+section ul{
     /* This gives the padding required for the bullet points */
     padding-left: 16px
 }
 
-article li {
-    padding-top: 4px;
-    padding-bottom: 4px;
+section li {
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 h3 {
     text-align: left;
-    font-size: 16px;
-    margin-top: 8px;
+    font-size: 18px;
+    margin-top: 18px;
+    margin-bottom: 9px;
 }
 
+h4 {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
 
 footer{
     position: fixed;
@@ -168,3 +193,23 @@ label span{
     z-index: 100000; /* Above WP toolbar. */
 }
     /* End of text only for screen reader */
+
+    /* Tablet */
+@media screen and (min-width: 768px) {
+
+    main {
+        margin-left: 16px;
+        margin-right:16px;
+    }
+
+    .item-4, .item-5, .item-6, .item-7 {
+        /* width: calc((100%-3*2em)/4) */
+        width: 45%;
+    }
+
+    .item-9, .item-10 {
+        /* width: calc((100%-2em)/2); */
+        width: 45%;
+    }
+
+}
