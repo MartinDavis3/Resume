@@ -3,20 +3,14 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
-    max-width: 1415px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
-body {
-    background-color: darkblue;
-}
 
-header, main, h1, h2, h3, nav, p, ul, a, article, div, footer, section {
+header, h1, footer, main, h2, h3, p, ul, a, article, div, section {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
-    /* margin-left: auto;  */
-    /* margin-right: auto; */
+    margin-right: auto;
+    margin-left: auto;
 }
 
 header {
@@ -30,7 +24,7 @@ header {
 }
 
 Header {
-    background-color: lightgray;
+    background-color: white;
 }
 
 h1{
@@ -41,27 +35,41 @@ h1{
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: lightblue;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    background-color: rgb(181, 225, 204);
+    height: auto;
 }
 
-nav ul li {
+nav div {       /* this is used as a flexbox */
+    max-width: 1415px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav ul {       /* these are the flexbox items */
+    display: block;
+    height: auto;
+    margin: 0;
+}
+
+nav li {
     display: inline-block;
     text-align: left;
 }
 
 .section-links a {
-    text-decoration: none; 
-    line-height: 20px;
-    /* provide space between items */
+    text-decoration: none;
+    color: rgb(21, 46, 34); 
+     /* provide space between items */
     margin-right: 4px;
     margin-left: 4px;
     /* also provide some padding so that highlight block on hover is slightly larger than text */
     padding-right: 4px;
     padding-left: 4px;
+    line-height: 26px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .social-media-links a {
@@ -69,7 +77,7 @@ nav ul li {
 }
 
 .section-links a:hover, .page-nav ul li a:focus, .page-nav ul li a:active {
-    background-color: rgb(0, 12, 175);
+    background-color: rgb(62, 128, 96);
     color:#fff;
 }
 
@@ -84,15 +92,21 @@ nav ul li {
 .social-media-links a:hover .fab,
 .social-media-links a:focus .fab,
 .social-media-links a:active .fab {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     color: rgba(50, 50, 50, 0.5)
 }
 
 /* styling for main section and flexbox */
 
 main {
+    background-color: rgb(62, 128, 96);
+}
+
+article {
+    max-width: 1415px;
     /* Leave space for fixed header, nav bar and footer. */
     padding-top: 72px;
+    padding-bottom: 48px;
     /*small left and right space off edge of screen */
     padding-left: 6px;
     padding-right: 6px;
@@ -104,18 +118,23 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* margin-left: 0; */
+    /* margin-right: 0; */
 }
 
 /* Flex items. */
 .flex-item {
     display: block;
     width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .flex-item:not(h2) {
-    background-color: lightgreen;
-    padding-left: 6px;
-    padding-right: 6px;
+    background-color: rgb(181, 225, 204);
+    padding: 16px;
     border-radius: 10px;
 }
 
@@ -128,7 +147,7 @@ section {
 h2{
     text-align: center;
     font-size: 22px;
-    margin-top: calc(22px - 72px);
+    /* margin-top: -50px; calc(22px - 72px); */
     margin-bottom: 11px;
     padding-top: 72px;
 }
@@ -146,7 +165,7 @@ section li {
 h3 {
     text-align: left;
     font-size: 18px;
-    margin-top: 18px;
+    margin-top: 9px;
     margin-bottom: 9px;
 }
 
@@ -165,7 +184,7 @@ footer{
     left: 0;
     margin: 0, auto;
     z-index: 1;
-    background-color: lightgray;
+    background-color: rgb(240, 240, 240);
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 8px;
@@ -212,17 +231,22 @@ label span{
     /* Tablet */
 @media screen and (min-width: 768px) {
 
-    main {
+    article {
         padding-left: 16px;
         padding-right: 16px;
     }
 
+    nav ul {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
     .item-4, .item-5, .item-6, .item-7 {
-        width: calc( 50% -  24px);
+        width: calc( 50% -  8px);
     }
 
     .item-9, .item-10 {
-        width: calc( 50% -  24px );
+        width: calc( 50% -  8px );
     }
 
 }
@@ -230,17 +254,22 @@ label span{
 /* Desktop */
 @media screen and (min-width: 1200px) {
 
-    main {
+    article {
         padding-left: 32px;
         padding-right: 32px;
     }
 
+    nav ul {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
     .item-4, .item-5, .item-6, .item-7 {
-        width: calc( 25% - 36px);
+        width: calc( 25% - 16px);
     }
 
     .item-9, .item-10 {
-        width: calc( 50% - 24px);
+        width: calc( 50% - 16px);
     }
 
 }
