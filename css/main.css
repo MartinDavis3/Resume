@@ -234,6 +234,7 @@ label span{
 
 /* Flexbox for my contact details */
 .my-contact {
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -290,25 +291,29 @@ label span{
 
 /* End of flexbox */
 
-/* Grid for form */
+/* Form */
 
 form h2 {
     padding-top: 0;  /* reset this from the large padding needed on the index.html page */
 }
 
+/* Grid for form */
+
 form {
+    max-width: 1000px;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
+/* Single column for mobile, so all elements in correct place */
+
+/* Styling of individual form elements */
+
 form input,
 form textarea,
 form label:not([for="contact-means"]) {
     display: block;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 form input,
@@ -319,11 +324,22 @@ form label {
     margin-right: auto;
     margin-top: 4px;
     margin-bottom: 4px;
+    justify-self: center;
+}
+
+form textarea {
+    width: 300px;
+    height: 200px;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
 }
 
 form select {
     width: 98px;
 }
+
 
 #sub-button {
     /* padding for the button is between the edge of the button
@@ -356,12 +372,42 @@ form select {
         margin-right: 16px;
     }
 
+    /* Modify layout of flexbox items on index page */
+
     .item-4, .item-5, .item-6, .item-7 {
         width: calc( 50% -  8px);
     }
 
     .item-9, .item-10 {
         width: calc( 50% -  8px );
+    }
+
+    /* Modify layout of grid on contact page */
+
+    form {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    form *:nth-child(1) {
+        grid-column: 1 / span 2;
+    }
+
+    form *:nth-child(n+6) {             /* this selects from 6th element onwards */
+        grid-column: 1 / span 2;
+    }
+
+    form label[for="comment"] {
+        width: 500px;
+    }
+    
+    form textarea {
+        width: 500px;
+        height: 200px;
+        resize: none;
+        margin-left: auto;
+        margin-right: auto;
+        justify-self: center;
     }
 
 }
