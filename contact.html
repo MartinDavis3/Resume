@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Martin Davis - contact</title>
+        <meta author="Martin Davis">
+        <meta charset="UTF-8">
+        <meta description="Resume website for class assignment">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/favicon.png">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Martin J. Davis</h1>
+            <nav class="page-nav">
+                <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content.-->
+                <div>
+                    <ul>
+                        <li class="page-links">
+                             
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="page-links">
+                            <a href=./index.html>Home</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="page-links">
+                             
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <form action="submit.php" method="POST" id="usrform">
+                <h2>Contact Me</h2>
+                <div class=entry-items>
+                    <label for=first-name>
+                        First name
+                        <input type="text" name="first-name" placeholder="Enter your first name..." aria-describedby="first-name-tip"/>
+                        <span id="first-name-tip" role="tooltip">Please enter your first name</span>
+                    </label>
+                        <label for=last-name>
+                        Last name
+                        <input type="text" name="last-name" placeholder="Enter your last name..." aria-describedby="last-name-tip"/>
+                        <span id="last-name-tip" role="tooltip">Please enter your last name</span>
+                    </label>
+                </div>
+                <div class=entry-item>
+                    <label for=email>
+                        Email
+                        <input type="text" name="email" placeholder="Enter your email..." aria-describedby="email-tip"/>
+                        <span id="email-tip" role="tooltip">Please enter your email address</span>
+                    </label>
+                    <label for=phone-number>
+                        Phone
+                        <input type="tel" name="phone-number" placeholder="Enter your phone number..." aria-describedby="phone-tip">
+                        <span id="phone-tip" role="tooltip">Please enter your telephone number</span>
+                    </label>
+                </div>
+                <div>
+                    <label for="contact-means">
+                        Please choose your preferred means of contact:
+                        <select name="contact-means">
+                            <option value="Email">Email</option>
+                            <option value="Phone">Phone</option>
+                        </select>
+                    </label>
+                </div>
+                <div id=text-message>
+                    <label for="comment">
+                        Leave me a brief message:
+                        <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="50" rows="5"></textarea>
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" value="Submit Form" id="sub-button">
+                </div>
+            </form>
+        </main>
+        <footer>
+            Martin J. Davis - Contact
+        </footer>
+    </body>
+</html>

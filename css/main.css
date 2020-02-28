@@ -6,7 +6,7 @@
 }
 
 
-header, h1, footer, main, h2, h3, p, ul, a, article, div, section {
+header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
     margin-right: auto;
@@ -35,7 +35,7 @@ h1{
 }
 
 nav {
-    background-color: rgb(181, 225, 204);
+    background-color: rgb(255, 240, 103);
     height: auto;
 }
 
@@ -58,9 +58,10 @@ nav li {
     text-align: left;
 }
 
-.section-links a {
+.section-links a,
+.page-links a {
     text-decoration: none;
-    color: rgb(21, 46, 34); 
+    color: rgb(97, 87, 0); 
      /* provide space between items */
     margin-right: 4px;
     margin-left: 4px;
@@ -76,8 +77,13 @@ nav li {
     margin-right: 8px
 }
 
-.section-links a:hover, .page-nav ul li a:focus, .page-nav ul li a:active {
-    background-color: rgb(62, 128, 96);
+.section-links a:hover,
+.section-links a:focus,
+.section-links a:active,
+.page-links a:hover,
+.page-links a:focus,
+.page-links a:active {
+    background-color:rgb(151, 136, 0);
     color:#fff;
 }
 
@@ -92,7 +98,6 @@ nav li {
 .social-media-links a:hover .fab,
 .social-media-links a:focus .fab,
 .social-media-links a:active .fab {
-    /* background-color: lightblue; */
     color: rgba(50, 50, 50, 0.5)
 }
 
@@ -102,7 +107,7 @@ main {
     background-color: rgb(62, 128, 96);
 }
 
-article {
+article, form {
     max-width: 1415px;
     /* Leave space for fixed header, nav bar and footer. */
     padding-top: 72px;
@@ -231,7 +236,7 @@ label span{
     /* Tablet */
 @media screen and (min-width: 768px) {
 
-    article {
+    article, form {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -254,7 +259,7 @@ label span{
 /* Desktop */
 @media screen and (min-width: 1200px) {
 
-    article {
+    article, form {
         padding-left: 32px;
         padding-right: 32px;
     }
