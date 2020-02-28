@@ -123,8 +123,6 @@ article, form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* margin-left: 0; */
-    /* margin-right: 0; */
 }
 
 /* Flex items. */
@@ -294,12 +292,56 @@ label span{
 
 /* Grid for form */
 
+form h2 {
+    padding-top: 0;  /* reset this from the large padding needed on the index.html page */
+}
+
 form {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
+form input,
+form textarea,
+form label:not([for="contact-means"]) {
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input,
+form textarea,
+form label {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+form select {
+    width: 98px;
+}
+
+#sub-button {
+    /* padding for the button is between the edge of the button
+    and the button text. To get the edge of the button to line up
+    with the rest of the elements, need to use margin-left */
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+
+    letter-spacing: 2px;  /* tried this new property to spread the button lettering a bit and make it clearer */
+    width: 200px;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 15px;  /* and this for rounded corners */
+    border-width: 3px;
+}
 
     /* Tablet */
 @media screen and (min-width: 768px) {
