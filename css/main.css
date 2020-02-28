@@ -231,7 +231,56 @@ label span{
     width: auto;
     z-index: 100000; /* Above WP toolbar. */
 }
-    /* End of text only for screen reader */
+
+/* End of text only for screen reader */
+
+/* Flexbox for my contact details */
+.my-contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.my-card {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 50% 50%;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    background: rgba(0, 0, 255, 0.5);
+    background: linear-gradient(45deg, rgba(0, 0, 255, 1) 100%, rgba(255, 95, 3, 1) 100%);
+}
+
+.my-card div:first-child {
+    justify-self: start;
+    align-self: start;
+}
+
+.my-card img {
+    justify-self: end;
+    align-self: start;
+}
+
+.my-card div:last-child {
+    justify-self: start;
+    align-self: end;
+}
+
+#me-description p {
+    font-size: 20px;
+    margin: 10px;
+}
+
+#me-description p:first-child {
+    font-size: 28px;
+}
+
+.my-card img {
+    height: 50px
+}
+
 
     /* Tablet */
 @media screen and (min-width: 768px) {
