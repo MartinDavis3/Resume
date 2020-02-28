@@ -18,7 +18,7 @@
                 <div>
                     <ul>
                         <li class="page-links">
-                             
+                            <!-- Blank because no section links needed here, but want page links in a similar place --> 
                         </li>
                     </ul>
                     <ul>
@@ -28,57 +28,61 @@
                     </ul>
                     <ul>
                         <li class="page-links">
-                             
+                            <!-- Blank because no social media links needed here, but want page links in a similar place --> 
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
+            <article>
+                <section class="my-card">
+                    <div>
+                        <p>Martin J. Davis</p>
+                        <p>Trainee Software Developer</p>
+                    </div>
+                    <img src="./img/favicon" alt="logo" title="logo">
+                    <div>
+                        <p>Phone: (xxx) xxx-xxxx</p>
+                        <p>Email: martin-davis@dmail.ca</p>
+                    </div>
+                </section>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18975.25474348155!2d-113.47407366080913!3d53.52372058001657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0227b912b32fd%3A0xd34cda6a9fd6a3cd!2sEdmonton%20Public%20Library%20-%20Idylwylde%20(Bonnie%20Doon)!5e0!3m2!1sen!2sca!4v1582910308713!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </article>
             <form action="submit.php" method="POST" id="usrform">
                 <h2>Contact Me</h2>
-                <div class=entry-items>
-                    <label for=first-name>
-                        First name
-                        <input type="text" name="first-name" placeholder="Enter your first name..." aria-describedby="first-name-tip"/>
-                        <span id="first-name-tip" role="tooltip">Please enter your first name</span>
-                    </label>
-                        <label for=last-name>
-                        Last name
-                        <input type="text" name="last-name" placeholder="Enter your last name..." aria-describedby="last-name-tip"/>
-                        <span id="last-name-tip" role="tooltip">Please enter your last name</span>
-                    </label>
-                </div>
-                <div class=entry-item>
-                    <label for=email>
-                        Email
-                        <input type="text" name="email" placeholder="Enter your email..." aria-describedby="email-tip"/>
-                        <span id="email-tip" role="tooltip">Please enter your email address</span>
-                    </label>
-                    <label for=phone-number>
-                        Phone
-                        <input type="tel" name="phone-number" placeholder="Enter your phone number..." aria-describedby="phone-tip">
-                        <span id="phone-tip" role="tooltip">Please enter your telephone number</span>
-                    </label>
-                </div>
-                <div>
-                    <label for="contact-means">
-                        Please choose your preferred means of contact:
-                        <select name="contact-means">
-                            <option value="Email">Email</option>
-                            <option value="Phone">Phone</option>
-                        </select>
-                    </label>
-                </div>
-                <div id=text-message>
-                    <label for="comment">
-                        Leave me a brief message:
-                        <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="50" rows="5"></textarea>
-                    </label>
-                </div>
-                <div>
-                    <input type="submit" value="Submit Form" id="sub-button">
-                </div>
+                <label for=first-name>
+                    First name
+                    <input type="text" name="first-name" placeholder="Enter your first name..." aria-describedby="first-name-tip"/>
+                    <span id="first-name-tip" role="tooltip">Please enter your first name</span>
+                </label>
+                <label for=last-name>
+                    Last name
+                    <input type="text" name="last-name" placeholder="Enter your last name..." aria-describedby="last-name-tip"/>
+                    <span id="last-name-tip" role="tooltip">Please enter your last name</span>
+                </label>
+                <label for=email>
+                    Email
+                    <input type="text" name="email" placeholder="Enter your email..." aria-describedby="email-tip"/>
+                    <span id="email-tip" role="tooltip">Please enter your email address</span>
+                </label>
+                <label for=phone-number>
+                    Phone
+                    <input type="tel" name="phone-number" placeholder="Enter your phone number..." aria-describedby="phone-tip">
+                    <span id="phone-tip" role="tooltip">Please enter your telephone number</span>
+                </label>
+                <label for="contact-means">
+                    Please choose your preferred means of contact:
+                    <select name="contact-means">
+                        <option value="Email">Email</option>
+                        <option value="Phone">Phone</option>
+                    </select>
+                </label>
+                <label for="comment">
+                    Leave me a brief message:
+                    <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="50" rows="5"></textarea>
+                </label>
+                <input type="submit" value="Submit Form" id="sub-button">
             </form>
         </main>
         <footer>
