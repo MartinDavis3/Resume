@@ -11,26 +11,16 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/scripts.js"></script>
 </head>
-
 <body>
     <header>
         <h1>Martin J. Davis</h1>
-        <nav class="page-nav">
-            <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content.-->
-            <div>
-                <ul>
-                    <li class="page-links">
-                        <!-- Blank because no section links needed here, but want page links in a similar place -->
-                    </li>
-                </ul>
-                <ul>
-                    <li class="page-links">
+        <nav>
+            <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content. -->
+            <!-- Note: Flexbox not really necessary here, but used to maintain consistency with index page and allow for future expansion. -->
+            <div role="presentation" id="flexbox-on-contact-page">
+                <ul class="page-nav">
+                    <li class="page-links" >
                         <a href=./index.html>Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="page-links">
-                        <!-- Blank because no social media links needed here, but want page links in a similar place -->
                     </li>
                 </ul>
             </div>

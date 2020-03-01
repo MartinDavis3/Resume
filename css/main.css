@@ -34,6 +34,8 @@ h1{
     padding-bottom: 4px;
 }
 
+/* Navigation */
+
 nav {
     background-color: rgb(255, 240, 103);
     height: auto;
@@ -51,6 +53,10 @@ nav ul {       /* these are the flexbox items */
     display: block;
     height: auto;
     margin: 0;
+}
+
+#flexbox-on-contact-page {      /* this is the flexbox on the contact page*/
+    max-width: 1000px;
 }
 
 nav li {
@@ -87,7 +93,7 @@ nav li {
     color:#fff;
 }
 
-/* styling for social media links */
+/* Social media links */
 
 .social-media-links .fab {
     color: rgba(50, 50, 50, 1);
@@ -101,7 +107,9 @@ nav li {
     color: rgba(50, 50, 50, 0.5)
 }
 
-/* styling for main section and flexbox */
+/* End navigation */
+
+/* Main section and flexbox */
 
 main {
     background-color: rgb(62, 128, 96);
@@ -141,7 +149,7 @@ article, form {
     border-radius: 10px;
 }
 
-/* styling for other page elements */
+/* Other page elements */
 
 section {
     line-height: 20px;
@@ -150,8 +158,9 @@ section {
 h2{
     text-align: center;
     font-size: 22px;
-    /* margin-top: -50px; calc(22px - 72px); */
     margin-bottom: 11px;
+    /* Need a lot of padding at the top to ensure heading is not
+    obscured by navigation bar when moved to by section link */
     padding-top: 72px;
 }
 
@@ -168,15 +177,8 @@ section li {
 h3 {
     text-align: left;
     font-size: 18px;
-    margin-top: 9px;
-    margin-bottom: 9px;
-}
-
-h4 {
-    text-align: left;
-    font-size: 16px;
-    margin-top: 16px;
-    margin-bottom: 8px;
+    margin-top: 22px;
+    margin-bottom: 4px;
 }
 
 footer{
@@ -192,6 +194,8 @@ footer{
     padding-bottom: 4px;
     padding-left: 8px;
 }
+
+/* ARIA */
 
 /* this is used to prevent the ARIA tooltips from displaying.
 They are just spoken when a screen reader is being used. */
@@ -230,7 +234,7 @@ label span{
     z-index: 100000; /* Above WP toolbar. */
 }
 
-/* End of text only for screen reader */
+/* End ARIA */
 
 /* Flexbox for my contact details */
 .my-contact {
@@ -287,9 +291,9 @@ label span{
     font-size: 28px;
 }
 
-/* End of grid */
+/* End grid */
 
-/* End of flexbox */
+/* End flexbox */
 
 /* Form */
 
@@ -308,7 +312,7 @@ form {
 
 /* Single column for mobile, so all elements in correct place */
 
-/* Styling of individual form elements */
+/* Individual form elements */
 
 form input,
 form textarea,
