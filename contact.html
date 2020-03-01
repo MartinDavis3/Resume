@@ -29,6 +29,7 @@
     <main>
         <article class="my-contact">
             <section class="my-card">
+                <h6 class=screen-reader-text>My business card</h6>
                 <div id="me-description" role="presentation">
                     <p>Martin J. Davis</p>
                     <p>Trainee</p>
@@ -36,11 +37,12 @@
                 </div>
                 <img src="./img/favicon.png" alt="logo" title="logo">
                 <div id="me-coords" role="presentation">
-                    <p>Phone: (xxx) xxx-xxxx</p>
+                    <p>Phone: (012) 345-6789</p>
                     <p>Email: martin-davis@dmail.ca</p>
                 </div>
             </section>
             <section>
+                <h6 class=screen-reader-text>Map of my local area</h6>
                 <p id="map-caption">This is the area of Edmonton in which I live.</p>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18975.25474348155!2d-113.47407366080913!3d53.52372058001657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0227b912b32fd%3A0xd34cda6a9fd6a3cd!2sEdmonton%20Public%20Library%20-%20Idylwylde%20(Bonnie%20Doon)!5e0!3m2!1sen!2sca!4v1582910308713!5m2!1sen!2sca"
@@ -82,7 +84,7 @@
             </label>
             <label for="comment">
                 Leave me a brief message (optional):
-                <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="1" rows="1" aria-describedby="message-tip"></textarea>
+                <textarea name="comment" form="usrform" placeholder="Enter text here..." aria-describedby="message-tip" cols="1" rows="1" ></textarea>
                 <span id="message-tip" role="tooltip">If you desire, enter a brief message</span>
             </label>
             <input type="submit" value="Submit Form" id="sub-button">

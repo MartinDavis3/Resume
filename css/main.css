@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
-
-
 * {  /* basic browser reset */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 16px;
 }
-
 
 header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     font-family: "Helvetica", "Arial", "sans-serif";
@@ -24,7 +21,7 @@ header {
     right: 0;
     bottom: auto;
     left: 0;
-    margin: 0, auto;
+    margin: 0 auto;
     z-index: 1;
 }
 
@@ -42,8 +39,8 @@ h1{
 /* Navigation */
 
 nav {
-    background-color: rgb(255, 240, 103);
     height: auto;
+    background-color: rgb(255, 240, 103);
 }
 
 nav div {       /* this is used as a flexbox */
@@ -73,16 +70,13 @@ nav li {
 .section-links a,
 .page-links a {
     text-decoration: none;
+    line-height: 26px;
     color: rgb(97, 87, 0); 
      /* provide space between items */
     margin-right: 4px;
     margin-left: 4px;
     /* also provide some padding so that highlight block on hover is slightly larger than text */
-    padding-right: 4px;
-    padding-left: 4px;
-    line-height: 26px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px;
 }
 
 .social-media-links a {
@@ -95,16 +89,16 @@ nav li {
 .page-links a:hover,
 .page-links a:focus,
 .page-links a:active {
-    background-color:rgb(151, 136, 0);
     color:#fff;
+    background-color:rgb(151, 136, 0);
 }
 
 /* Social media links */
 
 .social-media-links .fab {
-    color: rgba(50, 50, 50, 1);
     font-size: 20px;
     vertical-align: sub;    
+    color: rgba(50, 50, 50, 1);
 }
 
 .social-media-links a:hover .fab,
@@ -127,8 +121,8 @@ article, form {
     padding-top: 72px;
     padding-bottom: 48px;
     /*small left and right space off edge of screen */
-    padding-left: 6px;
     padding-right: 6px;
+    padding-left: 6px;
     background-color: white;
 }
 
@@ -144,9 +138,9 @@ article, form {
     display: block;
     width: 100%;
     margin-top: 8px;
+    margin-right: 0;
     margin-bottom: 8px;
     margin-left: 0;
-    margin-right: 0;
 }
 
 .flex-item:not(h2) {
@@ -163,9 +157,9 @@ section {
 
 h2{
     font-family: "Prompt", "Arial", "sans-serif";
+    font-size: 22px;
     font-weight: bolder;
     text-align: center;
-    font-size: 22px;
     margin-bottom: 11px;
     /* Need a lot of padding at the top to ensure heading is not
     obscured by navigation bar when moved to by section link */
@@ -195,7 +189,7 @@ footer{
     right: 0;
     bottom: 0;
     left: 0;
-    margin: 0, auto;
+    margin: 0 auto;
     z-index: 1;
     background-color: rgb(240, 240, 240);
     padding-top: 4px;
@@ -337,12 +331,12 @@ form label:not([for="contact-means"]) {
 form input,
 form textarea,
 form label {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2px;
-    margin-bottom: 16px;
     justify-self: center;
+    width: 300px;
+    margin-top: 2px;
+    margin-right: auto;
+    margin-bottom: 16px;
+    margin-left: auto;
 }
 
 form [for="contact-means"] {
@@ -351,12 +345,12 @@ form [for="contact-means"] {
 }
 
 form textarea {
+    justify-self: center;
     width: 300px;
     height: 200px;
     resize: none;
-    margin-left: auto;
     margin-right: auto;
-    justify-self: center;
+    margin-left: auto;
 }
 
 form select {
@@ -375,16 +369,15 @@ textarea:focus {
     /* padding for the button is between the edge of the button
     and the button text. To get the edge of the button to line up
     with the rest of the elements, need to use margin-left */
+    width: 200px;
+    height: 48px;
+    letter-spacing: 2px;  /* tried this new property to spread the button lettering a bit and make it clearer */
     margin-top: 20px;
     margin-right: auto;
     margin-bottom: 20px;
     margin-left: auto;
-
-    letter-spacing: 2px;  /* tried this new property to spread the button lettering a bit and make it clearer */
-    width: 200px;
-    height: 48px;
-    padding-left: 16px;
     padding-right: 16px;
+    padding-left: 16px;
     border-radius: 15px;  /* and this for rounded corners */
     border-width: 3px;
 }
@@ -393,13 +386,13 @@ textarea:focus {
 @media screen and (min-width: 768px) {
 
     article, form {
-        padding-left: 16px;
         padding-right: 16px;
+        padding-left: 16px;
     }
 
     nav ul {
-        margin-left: 16px;
         margin-right: 16px;
+        margin-left: 16px;
     }
 
     /* Modify layout of flexbox items on index page */
@@ -432,12 +425,12 @@ textarea:focus {
     }
     
     form textarea {
+        justify-self: center;
         width: 500px;
         height: 200px;
         resize: none;
-        margin-left: auto;
         margin-right: auto;
-        justify-self: center;
+        margin-left: auto;
     }
 
 }
@@ -446,13 +439,13 @@ textarea:focus {
 @media screen and (min-width: 1200px) {
 
     article, form {
-        padding-left: 32px;
         padding-right: 32px;
+        padding-left: 32px;
     }
 
     nav ul {
-        margin-left: 32px;
         margin-right: 32px;
+        margin-left: 32px;
     }
 
     .item-4, .item-5, .item-6, .item-7 {
