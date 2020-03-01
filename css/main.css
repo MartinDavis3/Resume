@@ -126,7 +126,15 @@ article, form {
     background-color: white;
 }
 
-.flexbox {
+.section-contents {
+    width: 100%;
+    background-color: rgb(181, 225, 204);
+    margin: 16px;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.resume-flexbox {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -134,17 +142,12 @@ article, form {
 }
 
 /* Flex items. */
-.flex-item {
-    display: block;
-    width: 100%;
-    margin-top: 8px;
-    margin-right: 0;
-    margin-bottom: 8px;
-    margin-left: 0;
-}
 
-.flex-item:not(h2) {
+.skills-item,
+.educ-item {
+    width: 100%;
     background-color: rgb(181, 225, 204);
+    margin: 16px;
     padding: 16px;
     border-radius: 10px;
 }
@@ -397,12 +400,9 @@ textarea:focus {
 
     /* Modify layout of flexbox items on index page */
 
-    .item-4, .item-5, .item-6, .item-7 {
-        width: calc( 50% -  8px);
-    }
-
-    .item-9, .item-10 {
-        width: calc( 50% -  8px );
+    .skills-item,
+    .educ-item {
+        width: calc( 50% -  16px );
     }
 
     /* Modify layout of grid on contact page */
@@ -448,11 +448,11 @@ textarea:focus {
         margin-left: 32px;
     }
 
-    .item-4, .item-5, .item-6, .item-7 {
+    .skills-item {
         width: calc( 25% - 16px);
     }
 
-    .item-9, .item-10 {
+    .educ-item {
         width: calc( 50% - 16px);
     }
 
