@@ -268,7 +268,8 @@ label span{
     padding: 10px;
     background: rgba(0, 0, 255, 0.5);
     background: linear-gradient(135deg, rgba(0, 0, 255, 0.5), rgba(255, 95, 3, 0.5));
-}
+    box-shadow: 12px 12px 10px 0px rgba(50, 50, 50, 0.4);
+    }
 
 .my-card div {
     margin-left: 0;
@@ -339,9 +340,14 @@ form label {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 2px;
+    margin-bottom: 16px;
     justify-self: center;
+}
+
+form [for="contact-means"] {
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 form textarea {
@@ -356,6 +362,13 @@ form textarea {
 form select {
     width: 98px;
 }
+
+form input:focus,
+form select:focus,
+textarea:focus {
+    background-color: rgba(255, 193, 224, 0.48);
+}
+
 
 
 #sub-button {

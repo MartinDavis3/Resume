@@ -29,13 +29,13 @@
     <main>
         <article class="my-contact">
             <section class="my-card">
-                <div id="me-description">
+                <div id="me-description" role="presentation">
                     <p>Martin J. Davis</p>
                     <p>Trainee</p>
                     <p>Software Developer</p>
                 </div>
                 <img src="./img/favicon.png" alt="logo" title="logo">
-                <div id="me-coords">
+                <div id="me-coords" role="presentation">
                     <p>Phone: (xxx) xxx-xxxx</p>
                     <p>Email: martin-davis@dmail.ca</p>
                 </div>
@@ -74,14 +74,16 @@
             </label>
             <label for="contact-means">
                 Preferred means of contact:
-                <select name="contact-means">
+                <select name="contact-means" aria-describedby="contact-means-tip">
                     <option value="Email">Email</option>
                     <option value="Phone">Phone</option>
+                    <span id="contact-means-tip" role="tooltip">Please select if you prefer to be contacted by email or telephone</span>
                 </select>
             </label>
             <label for="comment">
                 Leave me a brief message (optional):
-                <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="1" rows="1"></textarea>
+                <textarea name="comment" form="usrform" placeholder="Enter text here..." cols="1" rows="1" aria-describedby="message-tip"></textarea>
+                <span id="message-tip" role="tooltip">If you desire, enter a brief message</span>
             </label>
             <input type="submit" value="Submit Form" id="sub-button">
         </form>
