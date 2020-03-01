@@ -1,98 +1,97 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Martin Davis - contact</title>
-    <meta author="Martin Davis">
-    <meta charset="UTF-8">
-    <meta description="Resume website for class assignment">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/favicon.png">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/scripts.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Martin J. Davis</h1>
-        <nav>
-            <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content. -->
-            <!-- Note: Flexbox not really necessary here, but used to maintain consistency with index page and allow for future expansion. -->
-            <div role="presentation" id="flexbox-on-contact-page">
-                <ul class="page-nav">
-                    <li class="page-links" >
-                        <a href=./index.html>Home</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <article class="my-contact">
-            <section class="my-card">
-                <h6 class=screen-reader-text>My business card</h6>
-                <div id="me-description" role="presentation">
-                    <p>Martin J. Davis</p>
-                    <p>Trainee</p>
-                    <p>Software Developer</p>
+<html lang="en">
+    <head>
+        <title>Martin Davis - contact</title>
+        <meta name="author" content="Martin Davis">
+        <meta charset="UTF-8">
+        <meta name="description" content="Resume website for class assignment">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/favicon.png">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Martin J. Davis</h1>
+            <nav>
+                <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content. -->
+                <!-- Note: Flexbox not really necessary here, but used to maintain consistency with index page and allow for future expansion. -->
+                <div role="presentation" id="flexbox-on-contact-page">
+                    <ul class="page-nav">
+                        <li class="page-links" >
+                            <a href=./index.html>Home</a>
+                        </li>
+                    </ul>
                 </div>
-                <img src="./img/favicon.png" alt="logo" title="logo">
-                <div id="me-coords" role="presentation">
-                    <p>Phone: (012) 345-6789</p>
-                    <p>Email: martin-davis@dmail.ca</p>
-                </div>
-            </section>
-            <section>
-                <h6 class=screen-reader-text>Map of my local area</h6>
-                <p id="map-caption">This is the area of Edmonton in which I live.</p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18975.25474348155!2d-113.47407366080913!3d53.52372058001657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0227b912b32fd%3A0xd34cda6a9fd6a3cd!2sEdmonton%20Public%20Library%20-%20Idylwylde%20(Bonnie%20Doon)!5e0!3m2!1sen!2sca!4v1582910308713!5m2!1sen!2sca"
-                    width="340" height="230" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </section>
-        </article>
-        <form action="#" method="POST" id="usrform">
-            <h2>Contact Me</h2>
-            <label for=first-name>
-                First name
-                <input type="text" name="first-name" placeholder="Enter your first name..."
-                    aria-describedby="first-name-tip" />
-                <span id="first-name-tip" role="tooltip">Please enter your first name</span>
-            </label>
-            <label for=last-name>
-                Last name
-                <input type="text" name="last-name" placeholder="Enter your last name..."
-                    aria-describedby="last-name-tip" />
-                <span id="last-name-tip" role="tooltip">Please enter your last name</span>
-            </label>
-            <label for=email>
-                Email
-                <input type="text" name="email" placeholder="Enter your email..." aria-describedby="email-tip" />
-                <span id="email-tip" role="tooltip">Please enter your email address</span>
-            </label>
-            <label for=phone-number>
-                Phone
-                <input type="tel" name="phone-number" placeholder="Enter your phone number..."
-                    aria-describedby="phone-tip">
-                <span id="phone-tip" role="tooltip">Please enter your telephone number</span>
-            </label>
-            <label for="contact-means">
-                Preferred means of contact:
-                <select name="contact-means" aria-describedby="contact-means-tip">
-                    <option value="Email">Email</option>
-                    <option value="Phone">Phone</option>
-                    <span id="contact-means-tip" role="tooltip">Please select if you prefer to be contacted by email or telephone</span>
-                </select>
-            </label>
-            <label for="comment">
-                Leave me a brief message (optional):
-                <textarea name="comment" form="usrform" placeholder="Enter text here..." aria-describedby="message-tip" cols="1" rows="1" ></textarea>
-                <span id="message-tip" role="tooltip">If you desire, enter a brief message</span>
-            </label>
-            <input type="submit" value="Submit Form" id="sub-button">
-        </form>
-    </main>
-    <footer>
-        Martin J. Davis - Contact
-    </footer>
-</body>
-
+            </nav>
+        </header>
+        <main>
+            <article class="my-contact">
+                <h6 class=screen-reader-text>My Contact Details</h6>
+                <section class="my-card">
+                    <h6 class=screen-reader-text>My business card</h6>
+                    <div id="me-description" role="presentation">
+                        <p>Martin J. Davis</p>
+                        <p>Trainee</p>
+                        <p>Software Developer</p>
+                    </div>
+                    <img src="./img/favicon.png" alt="logo" title="logo">
+                    <div id="me-coords" role="presentation">
+                        <p>Phone: (012) 345-6789</p>
+                        <p>Email: martin-davis@dmail.ca</p>
+                    </div>
+                </section>
+                <section>
+                    <h6 class=screen-reader-text>Map of my local area</h6>
+                    <p id="map-caption">This is the area of Edmonton in which I live.</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18975.25474348155!2d-113.47407366080913!3d53.52372058001657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0227b912b32fd%3A0xd34cda6a9fd6a3cd!2sEdmonton%20Public%20Library%20-%20Idylwylde%20(Bonnie%20Doon)!5e0!3m2!1sen!2sca!4v1582910308713!5m2!1sen!2sca"
+                        width="340" height="230" style="border:0;" allowfullscreen=""></iframe>
+                </section>
+            </article>
+            <form action="#" method="POST" id="usrform">
+                <h2>Contact Me</h2>
+                <label for="first-name">
+                    First name
+                    <input id="first-name" type="text" name="first-name" placeholder="Enter your first name..."
+                        aria-describedby="first-name-tip" />
+                    <span id="first-name-tip" role="tooltip">Please enter your first name</span>
+                </label>
+                <label for="last-name">
+                    Last name
+                    <input id="last-name" type="text" name="last-name" placeholder="Enter your last name..."
+                        aria-describedby="last-name-tip" />
+                    <span id="last-name-tip" role="tooltip">Please enter your last name</span>
+                </label>
+                <label for="email">
+                    Email
+                    <input id="email" type="text" name="email" placeholder="Enter your email..." aria-describedby="email-tip" />
+                    <span id="email-tip" role="tooltip">Please enter your email address</span>
+                </label>
+                <label for="phone-number">
+                    Phone
+                    <input id="phone-number" type="tel" name="phone-number" placeholder="Enter your phone number..."
+                        aria-describedby="phone-tip">
+                    <span id="phone-tip" role="tooltip">Please enter your telephone number</span>
+                </label>
+                <label for="contact-means">
+                    Preferred means of contact:
+                    <!-- ARIA using the same configuration as above gives html code errors -->
+                    <select id="contact-means" name="contact-means">
+                        <option value="Email">Email</option>
+                        <option value="Phone">Phone</option>
+                    </select>
+                </label>
+                <label for="comment">
+                    Leave me a brief message (optional):
+                    <textarea id="comment" name="comment" form="usrform" placeholder="Enter text here..." aria-describedby="message-tip" cols="1" rows="1" ></textarea>
+                    <span id="message-tip" role="tooltip">If you desire, enter a brief message</span>
+                </label>
+                <input type="submit" value="Submit Form" id="sub-button">
+            </form>
+        </main>
+        <footer>
+            Martin J. Davis - Contact
+        </footer>
+    </body>
 </html>

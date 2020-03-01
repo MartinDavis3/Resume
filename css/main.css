@@ -1,12 +1,65 @@
 @import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
-* {  /* basic browser reset */
+
+/* Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Reset */
+
+* {  /* use border-box sizing everywhere and default 16px font size */
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-size: 16px;
 }
+
 
 header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     font-family: "Helvetica", "Arial", "sans-serif";
@@ -23,9 +76,6 @@ header {
     left: 0;
     margin: 0 auto;
     z-index: 1;
-}
-
-Header {
     background-color: white;
 }
 
@@ -36,7 +86,11 @@ h1{
     padding-bottom: 4px;
 }
 
-/* Navigation */
+ul {
+    list-style-type: disc;
+}
+
+  /* Navigation */
 
 nav {
     height: auto;
@@ -127,7 +181,7 @@ article, form {
 }
 
 .section-contents {
-    width: 100%;
+    /* width: 100%; */
     background-color: rgb(181, 225, 204);
     margin: 16px;
     padding: 16px;
@@ -171,7 +225,7 @@ h2{
 
 section ul{
     /* This gives the padding required for the bullet points */
-    padding-left: 16px
+    padding-left: 16px;
 }
 
 section li {
@@ -182,6 +236,7 @@ section li {
 h3 {
     text-align: left;
     font-size: 18px;
+    font-weight: bold;
     margin-top: 22px;
     margin-bottom: 4px;
 }
@@ -402,7 +457,8 @@ textarea:focus {
 
     .skills-item,
     .educ-item {
-        width: calc( 50% -  16px );
+        /* width: calc( 50% -  16px ); */
+        width: calc( ( 100% - 64px) / 2 );
     }
 
     /* Modify layout of grid on contact page */
@@ -449,11 +505,12 @@ textarea:focus {
     }
 
     .skills-item {
-        width: calc( 25% - 16px);
+        /* width: calc( 25% - 16px); */
+        width: calc( ( ( 100% - 64px) / 4 ) - 16px )
     }
 
     .educ-item {
-        width: calc( 50% - 16px);
+        width: calc( ( 100% - 64px) / 2 );
     }
 
 }
