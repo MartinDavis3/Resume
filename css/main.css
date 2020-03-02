@@ -56,11 +56,15 @@ table {
 /* End of Reset */
 
 * {  /* use border-box sizing everywhere and default 16px font size */
+    font-family: "Helvetica", "Arial", "sans-serif";
+    width: auto;
     box-sizing: border-box;
     font-size: 16px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-
+/* seem to need this next section in addition to above, but not sure why */
 header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
@@ -221,6 +225,12 @@ h2{
     /* Need a lot of padding at the top to ensure heading is not
     obscured by navigation bar when moved to by section link */
     padding-top: 72px;
+}
+
+#top-heading {
+	font-size: 26px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 section ul{
@@ -421,8 +431,6 @@ textarea:focus {
     background-color: rgba(255, 193, 224, 0.48);
 }
 
-
-
 #sub-button {
     /* padding for the button is between the edge of the button
     and the button text. To get the edge of the button to line up
@@ -438,6 +446,129 @@ textarea:focus {
     padding-left: 16px;
     border-radius: 15px;  /* and this for rounded corners */
     border-width: 3px;
+}
+
+/* Portfolio */
+
+/* Grid */
+
+.my-portfolio {   /* grid container */
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+/* Targeting multiple tags and classes in grid */
+.my-portfolio div,
+.my-portfolio section {		/* grid items */
+	position: relative;
+	margin: 16px;
+	padding: 16px;
+}
+
+.text-block {
+	line-height: 20px;
+    background-color: rgb(181, 225, 204);
+    border-radius: 10px;
+}
+
+.my-portfolio img {
+	display: block;
+	padding: 5px;
+	background-color: white;
+}
+
+.my-portfolio p {
+	margin-bottom: 16px;
+}
+
+#after-top-heading {
+	text-align: center;
+	font-size: 22px;
+	margin-top: 6px;
+}
+
+.my-portfolio cite span {
+	font-weight: bold;
+}
+
+/* targeting specific items in grid */
+
+#ccvd {   /* CCVD fig section */
+	height: 80vw;
+}
+
+#ccvd figure {		/* CCVD figure box */
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#ccvd-rig {   /* CCVD-rig image */
+	position: absolute;
+	width: 75%;
+	top: 24%;
+	left: 0;
+}
+
+#mfcs {		/* the MFCs image */
+	position: absolute;
+	width: 32%;
+	top: 66%;
+	left: 67%;
+}
+
+.my-portfolio video {   /* burner head video */
+	position: absolute;
+	width: 35%;
+	top: 20%;
+	left: 60%;
+	padding: 5px;
+	background-color: white;
+}
+
+/* CARS */
+#cars {   /* fig section */
+	height: 86vw;
+}
+
+#cars figure {		/* figure box */
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#cars-sys {   /* CARS-sys image */
+	position: absolute;
+	width: 65%;
+	top: 19%;
+	left: 35%;
+}
+
+#las-path {		/* Laser path image */
+	position: absolute;
+	width: 45%;
+	top: 54%;
+	left: 0%;
+}
+
+/* Panning */
+
+#code-snip {   /* fig section */
+	height: 126vw;
+}
+
+#code-snip figure {		/* figure box */
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#code-snip-img {   /*  image */
+	position: absolute;
+	width: 100%;
+	top: 8%;
+	left: 0%;
 }
 
     /* Tablet */
@@ -505,12 +636,65 @@ textarea:focus {
     }
 
     .skills-item {
-        /* width: calc( 25% - 16px); */
         width: calc( ( ( 100% - 64px) / 4 ) - 16px )
     }
 
     .educ-item {
         width: calc( ( 100% - 64px) / 2 );
     }
+
+    /* Portfolio */
+
+	.my-portfolio {   /* grid container */
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto auto;
+	}
+
+	.my-portfolio *:nth-child(1) {
+		grid-column: 1 / span 2;
+		grid-row: 1;
+	}
+
+	.my-portfolio *:nth-child(2) {
+		grid-column: 1 / span 1;
+		grid-row: 2;
+	}
+	
+	.my-portfolio *:nth-child(3) {
+		grid-column: 2 / span 1;
+		grid-row: 2;
+	}
+	
+	.my-portfolio *:nth-child(4) {
+		grid-column: 2 / span 1;
+		grid-row: 3;
+	}
+
+	.my-portfolio *:nth-child(5) {
+		grid-column: 1 / span 1;
+		grid-row: 3;
+	}
+
+	.my-portfolio *:nth-child(6) {
+		grid-column: 1 / span 1;
+		grid-row: 4;
+	}
+
+	.my-portfolio *:nth-child(7) {
+		grid-column: 2 / span 1;
+		grid-row: 4;
+	}
+
+	#ccvd {   /* CCVD fig section */
+		height: 40vw;
+	}
+
+	#cars {   /* CARS fig section */
+		height: 43vw;
+	}
+
+	#code-snip {   /* Code fig section */
+		height: 63vw;
+	}
 
 }
