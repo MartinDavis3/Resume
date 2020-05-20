@@ -2,4 +2,6 @@
 
 My Professional Resume. 
 
-Also included is a brief portfolio section.
+Includes is a brief portfolio section.
+
+Links are also provided to some of my projects.
