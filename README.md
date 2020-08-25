@@ -2,6 +2,6 @@
 
 My Professional Resume. 
 
-Includes is a brief portfolio section.
+Includes a brief portfolio section.
 
-Links are also provided to some of my projects.
+Links are also provided to some of my front-end projects.
