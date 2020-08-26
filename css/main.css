@@ -3,7 +3,6 @@
 
 @import './meyer-reset.css';
 
-/* seem to need this next section in addition to above, but not sure why */
 header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     font-family: "Helvetica", "Arial", "sans-serif";
     width: auto;
@@ -48,7 +47,8 @@ nav {
     background-color: rgb(255, 240, 103);
 }
 
-nav div {       /* this is used as a flexbox */
+/* Flexbox container */
+nav div { 
     max-width: 1415px;
     display: flex;
     flex-direction: row;
@@ -56,7 +56,8 @@ nav div {       /* this is used as a flexbox */
     justify-content: space-between;
 }
 
-nav ul {       /* these are the flexbox items */
+/* Flexbox items */
+nav ul {
     display: block;
     height: auto;
     margin-right: 8px;
@@ -73,10 +74,10 @@ nav li {
     text-decoration: none;
     line-height: 26px;
     color: rgb(97, 87, 0); 
-     /* provide space between items */
+     /* Provide space between items */
     margin-right: 4px;
     margin-left: 4px;
-    /* also provide some padding so that highlight block on hover is slightly larger than text */
+    /* Also provide some padding so that highlight block on hover is slightly larger than text */
     padding: 4px;
 }
 
@@ -118,17 +119,16 @@ main {
 
 article, form {
     max-width: 1415px;
-    /* Leave space for fixed header, nav bar and footer. */
+    /* Leave space for fixed header, nav bar and footer */
     padding-top: 72px;
     padding-bottom: 48px;
-    /*small left and right space off edge of screen */
+    /* Small left and right space off edge of screen */
     padding-right: 6px;
     padding-left: 6px;
     background-color: white;
 }
 
 .section-contents {
-    /* width: 100%; */
     background-color: rgb(181, 225, 204);
     margin: 16px;
     padding: 16px;
@@ -142,8 +142,7 @@ article, form {
     justify-content: space-between;
 }
 
-/* Flex items. */
-
+/* Flex items */
 .skills-item,
 .educ-item {
     width: 100%;
@@ -214,7 +213,7 @@ footer{
 
 /* ARIA */
 
-/* this is used to prevent the ARIA tooltips from displaying.
+/* This is used to prevent the ARIA tooltips from displaying.
 They are just spoken when a screen reader is being used. */
 label span{
     display: none;
@@ -258,15 +257,18 @@ label span{
 
 /* Grid */
 
-.my-portfolio {   /* grid container */
+/* Grid container */
+.my-portfolio {
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 /* Targeting multiple tags and classes in grid */
+
+/* Grid items */
 .my-portfolio div,
-.my-portfolio section {		/* grid items */
+.my-portfolio section {
 	position: relative;
 	margin: 16px;
 	padding: 16px;
@@ -298,33 +300,38 @@ label span{
 	font-weight: bold;
 }
 
-/* targeting specific items in grid */
+/* Targeting specific items in grid */
 
-#ccvd {   /* CCVD fig section */
+/* CCVD figure section */
+#ccvd {
 	height: 80vw;
 }
 
-#ccvd figure {		/* CCVD figure box */
+/* CCVD figure box */
+#ccvd figure {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-#ccvd-rig {   /* CCVD-rig image */
+/* CCVD-rig image */
+#ccvd-rig {
 	position: absolute;
 	width: 75%;
 	top: 24%;
 	left: 0;
 }
 
-#mfcs {		/* the MFCs image */
+/* The MFCs image */
+#mfcs {
 	position: absolute;
 	width: 32%;
 	top: 66%;
 	left: 67%;
 }
 
-.my-portfolio video {   /* burner head video */
+/* Burner head video */
+.my-portfolio video {
 	position: absolute;
 	width: 35%;
 	top: 20%;
@@ -334,24 +341,29 @@ label span{
 }
 
 /* CARS */
-#cars {   /* fig section */
+
+/* Figure section */
+#cars {
 	height: 86vw;
 }
 
-#cars figure {		/* figure box */
+/* Figure box */
+#cars figure {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-#cars-sys {   /* CARS-sys image */
+/* CARS-system image */
+#cars-sys {
 	position: absolute;
 	width: 65%;
 	top: 19%;
 	left: 35%;
 }
 
-#las-path {		/* Laser path image */
+/* Laser path image */
+#las-path {
 	position: absolute;
 	width: 45%;
 	top: 54%;
@@ -360,24 +372,27 @@ label span{
 
 /* Panning */
 
-#code-snip {   /* fig section */
+/* Figure section */
+#code-snip {
 	height: 126vw;
 }
 
-#code-snip figure {		/* figure box */
+/* Figure box */
+#code-snip figure {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-#code-snip-img {   /*  image */
+/* Image */
+#code-snip-img {
 	position: absolute;
 	width: 100%;
 	top: 8%;
 	left: 0%;
 }
 
-    /* Tablet */
+/* Tablet */
 @media screen and (min-width: 768px) {
 
     article, form {
@@ -422,10 +437,13 @@ label span{
 
     /* Portfolio */
 
-	.my-portfolio {   /* grid container */
+    /* Grid container */
+	.my-portfolio {
 		grid-template-columns: 50% 50%;
 		grid-template-rows: auto auto auto auto;
 	}
+
+    /* Grid items */
 
 	.my-portfolio div:nth-child(1) {
 		grid-column: 1 / span 2;
@@ -462,15 +480,18 @@ label span{
 		grid-row: 4;
 	}
 
-	#ccvd {   /* CCVD fig section */
+    /* CCVD figure section */
+    #ccvd {
 		height: 40vw;
 	}
 
-	#cars {   /* CARS fig section */
+    /* CARS figure section */
+	#cars {
 		height: 43vw;
 	}
-
-	#code-snip {   /* Code fig section */
+   
+    /* Code figure section */
+	#code-snip {
 		height: 59.6vw;
 	}
 
@@ -479,15 +500,18 @@ label span{
 /* Max Width  - The used width is now fixed, so section heights also need to be. */
 @media screen and (min-width: 1415px) {
 
-	#ccvd {   /* CCVD fig section */
+    /* CCVD figure section */
+	#ccvd {
 		height: 566px;
 	}
 
-	#cars {   /* CARS fig section */
+    /* CARS figure section */
+	#cars {
 		height: 609px;
 	}
-
-	#code-snip {   /* Code fig section */
+   
+    /* Code figure section */
+	#code-snip {
 		height: 844px;
 	}
 
