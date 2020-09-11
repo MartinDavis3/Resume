@@ -120,7 +120,7 @@ main {
 article, form {
     max-width: 1415px;
     /* Leave space for fixed header, nav bar and footer */
-    padding-top: 72px;
+    /* padding-top: 128px; */
     padding-bottom: 48px;
     /* Small left and right space off edge of screen */
     padding-right: 6px;
@@ -165,12 +165,13 @@ h2{
     text-align: center;
     margin-bottom: 11px;
     margin-top: 11px;
+    line-height: 28px;
 }
 
 .link-heading {
     /* Need a lot of padding at the top to ensure heading is not
     obscured by navigation bar when moved to by section link */
-    padding-top: 72px;
+    padding-top: 172px;
 }
 
 #top-heading {
@@ -294,10 +295,25 @@ label span{
     margin-left: 16px;
 }
 
+.my-portfolio figcaption {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.fig-block h3 {
+    margin-top: 0;
+}
+
+#top-heading {
+    /* Padding needed for fixed for title and nav bar */
+    padding-top: 64px;
+}
+
 #after-top-heading {
 	text-align: center;
 	font-size: 22px;
-	margin-top: 6px;
+    margin-top: 6px;
+    margin-bottom: 0;
 }
 
 .my-portfolio cite span {
@@ -396,6 +412,47 @@ label span{
 	left: 0%;
 }
 
+@media screen and (min-width: 363px) {
+    .link-heading {
+        /* Reduce padding as
+        navigation bar gets narrower */
+        padding-top: 152px;
+    }    
+}
+
+@media screen and (min-width: 416px) {
+
+    .link-heading {
+        padding-top: 128px;
+    }    
+
+    .my-portfolio figcaption {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+}
+
+@media screen and (min-width: 477px) {
+    #top-heading {
+        /* Padding needed for fixed for title and nav bar */
+        padding-top: 40px;
+    }
+}
+
+@media screen and (min-width: 549px) {
+
+    .link-heading {
+        padding-top: 104px;
+    }    
+
+    .my-portfolio figcaption {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+}
+
 /* Tablet */
 @media screen and (min-width: 768px) {
 
@@ -416,6 +473,12 @@ label span{
         width: calc( ( 100% - 64px) / 2 );
     }
 
+}
+
+@media screen and (min-width: 986px) {
+    .link-heading {
+        padding-top: 72px;
+    }    
 }
 
 /* Desktop */
