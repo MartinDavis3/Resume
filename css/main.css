@@ -290,6 +290,10 @@ label span{
 	margin-bottom: 16px;
 }
 
+.my-portfolio a {
+    margin-left: 16px;
+}
+
 #after-top-heading {
 	text-align: center;
 	font-size: 22px;
@@ -454,30 +458,40 @@ label span{
 		grid-column: 1 / span 1;
 		grid-row: 2;
 	}
-	
+
 	.my-portfolio section:nth-child(3) {
 		grid-column: 2 / span 1;
 		grid-row: 2;
 	}
-	
+
 	.my-portfolio section:nth-child(4) {
+		grid-column: 1 / span 1;
+		grid-row: 3;
+	}
+	
+	.my-portfolio section:nth-child(5) {
 		grid-column: 2 / span 1;
 		grid-row: 3;
 	}
-
-	.my-portfolio section:nth-child(5) {
-		grid-column: 1 / span 1;
-		grid-row: 3;
-	}
-
+	
 	.my-portfolio section:nth-child(6) {
-		grid-column: 1 / span 1;
+		grid-column: 2 / span 1;
 		grid-row: 4;
 	}
 
 	.my-portfolio section:nth-child(7) {
-		grid-column: 2 / span 1;
+		grid-column: 1 / span 1;
 		grid-row: 4;
+	}
+
+	.my-portfolio section:nth-child(8) {
+		grid-column: 1 / span 1;
+		grid-row: 5;
+	}
+
+	.my-portfolio section:nth-child(9) {
+		grid-column: 2 / span 1;
+		grid-row: 5;
 	}
 
     /* CCVD figure section */

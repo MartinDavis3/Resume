@@ -1,163 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My Portfolio - Martin Davis</title>
-        <meta name="author" content="Martin Davis">
-        <meta charset="UTF-8">
-        <meta name="description" content="My-Portfolio">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="./img/favicon.png">
-        <link rel="stylesheet" href="./css/main.css">
-        <script src="./js/scripts.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Martin J. Davis</h1>
-            <nav>
-                <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content. -->
-                <div role="presentation" id="flexbox-on-contact-page">
-                    <ul class="page-nav">
-                        <li class="page-links" >
-                            <a href="https://martindavis3.github.io/Resume/">Home</a>
-                        </li>
-                    </ul>
-                    <ul class="page-nav">
-                        <li class="page-links">
-                            <a href="./portfolio.html">Portfolio</a>
-                        </li>
-                        <li class="page-links">
-                            <a href="https://martindavis3.github.io/Projematic-FE/" target="_blank">Projematic-FE</a>
-                        </li>
-                        <li class="page-links">
-                            <a href="https://martindavis3.github.io/Molecular-Formula/" target="_blank">Molecular Formula</a>
-                        </li>
-                    </ul>
-                    <ul class="social-media-nav">
-                        <li class="social-media-links">
-                            <a href="https://www.linkedin.com/in/martin-davis-4964b875/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                                <span class="screen-reader-text">Linked In</span>
-                            </a>
-                        </li>
-                        <li class="social-media-links">
-                            <a href="https://github.com/MartinDavis3" target="_blank">
-                                <i class="fab fa-github-square"></i>
-                                <span class="screen-reader-text">Git Hub</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <article class="my-portfolio">
-                <div role="presentation">
-                    <h2 id="top-heading">My Portfolio</h2>
-                    <p id="after-top-heading">A brief illustration of some of my work.</p>
-                </div>
-                <section class="text-block">
-                    <h2>Combustion CVD</h2>
-                    <h3>Introduction</h3>
-                    <p>
-                        This work was carried out at the University of Salford and was funded by the European Union Fifth Framework Programme.
-                    </p>
-                    <p>
-                        I built new equipment for combustion CVD. This was used to deposit thin films of various metal oxides on different substrates by passing appropriate chemical precursors through a flame.
-                    </p>
-                    <h3>The Software Challenge</h3>
-                    <p>
-                        Develop software to allow the user to control the gas flows (propane, oxygen and nitrogen) to the burner with sufficient accuracy an reproducibility to obtain consistent results. It was also important that the user could enter physically and chemically useful parameters such as fuel-oxygen ratio and total gas flow, rather than the less meaningful individual gas flows. To achieve this, digital mass flow controllers (MFCs) were used, connected by a RS-485 interface to a computer running software that I wrote in Visual Basic.
-                    </p>
-                    <h3>A Problem Encountered</h3>
-                    <p>
-                        Commands were sent to the MFCs through the interface buffer which then needed to be switched from send to receive in order to read the reply from the MFCs. This switching needed to occur a precise fraction of a millisecond after the software had sent the command, a delay too short to enable use of the normally available timer in Visual Basic.
-                    </p>
-                    <h3>The Solution I Found</h3>
-                    <p>
-                        I used Windows API calls to access the CPU clock, which had the resolution necessary to allow the software to switch the interface buffer with the accuracy and precision required.
-                    </p>
-                    <cite>
-                        <span role="presentation">Reference:</span> Growth of Thin Films of Molybdenum and Tungsten Oxides by Combustion Chemical Vapour Deposition using Aqueous Precursor Solutions. M. J. Davis, G. Benito, D. W. Sheel, M. E. Pemble, Adv. Mater., Chem. Vap. Deposition, 2004, 10, 29.
-                    </cite>
-                </section>
-                <section class="fig-block" id="ccvd">
-                    <h3>The Combustion CVD Rig</h3>
-                    <figure>
-                        <img id="ccvd-rig" src="./img/CCVD-Rig.jpg" alt="The combustion CVD rig" Title="Combution CVD Rig" width="400">
-                        <img id="mfcs" src="./img/CCVD-MFCs.jpg" alt="The MFCs" Title="MFCs" width="400">
-                        <video autoplay loop src="./video/burner.mp4" muted></video>
-                        <figcaption>
-                            The combustion CVD rig showing the user input screen. Insets show the MFCs behind the panel and a video of the flame and substrate carriage.
-                        </figcaption>
-                    </figure>
-                </section>
-                <section class="text-block">
-                    <h2>Spectroscopic Monitoring of a Chemical Reactor</h2>
-                    <h3>Introduction</h3>
-                    <p>
-                        This work was carried out at the University of Salford and was funded by the European Union BriteEuram Programme.
-                    </p>
-                    <p>
-                        A technique known as coherent anti-Stokes Raman scattering (CARS) was used to enable measurement of chemical species concentrations at precise points in a hot reactor. This used a pair of high powered, pulsed lasers together with optical components, photodetectors and signal processing electronics, all interfaced to a computer.
-                    </p>
-                    <h3>The Software Challenge</h3>
-                    <p>
-                        Write software to both control the scanning of the laser wavelength and acquire the data from the signal processing electronics, ensuring that synchronisation between wavelength and signal was maintained.
-                    </p>
-                    <h3>A Problem Encountered</h3>
-                    <p>
-                        I encountered problems with the RS-232 interface used because the standard was poorly defined and communication between the different pieces of equipment did not work.
-                    </p>
-                    <h3>The Solution I Found</h3>
-                    <p>
-                    I used a breakout box on the RS-232 line to determine that a handshake line to one of the pieces of equipment needed to be crossed-over.
-                    </p>
-                    <cite>
-                        <span role="presentation">Reference:</span> In-Situ Monitoring of Atmospheric Pressure Tin Oxide CVD using Coherent anti-Stokes Raman Scattering. M. J. Davis, M. E. Pemble, J. Phys. IV France, 1999, 9, Pr8-49.
-                    </cite>
-                </section>
-                <section class="fig-block" id="cars">
-                    <h3>The Spectroscopic Monitoring System</h3>
-                        <figure>
-                            <img id="cars-sys" src="./img/CARS-Rig.jpg" alt="The CARS system" title="CARS System" width="400">
-                            <img id="las-path" src="./img/CARS-laser-path.jpg" alt="The laser path through the reactor" title="Laser Path" width="400">
-                            <figcaption>
-                                The CARS system showing the lasers and signal processing electronics. The inset show the laser path in the reactor.
-                            </figcaption>
-                        </figure>
-                </section>
-                <section class="text-block">           
-                    <h2>Real Time Panning of Panoramic Images</h2>
-                    <h3>Introduction</h3>
-                    <p>
-                        After a trip to the Grand Canyon and Northern Arizona, I had lots of panoramic images made by stitching together many individual photographs. I found that when trying to show to show these to friends and family, the large aspect ratio meant to images lost their visual impression. While software is available to create videos that show panning across panoramic images, converting lots of images in this way can be time consuming and the resulting videos take up a lot of storage space.
-                    </p>   
-                    <h3>The Software Challenge</h3>
-                    <p>
-                        I wrote software in VB.NET to enable a slide show to be made and displayed, where any image with an aspect ratio greater than a certain value would be displayed as an image at full-height and then panned in real time.
-                    </p>
-                    <h3>A Problem Encountered</h3>
-                    <p>
-                        I found that panning of a full resolution image was too slow and jerky to be aesthetically acceptable.
-                    </p>
-                    <h3>The Solution I Found</h3>
-                    <p>
-                        I ran the code to produce the panning in a separate thread which I assigned a high priority. Additionally, obtaining the correct part of the image required for each frame, which is the slowest part of the process, was done in the time between frames, copying it to a temporary buffer. This buffer could then be quickly transferred to the screen at the correct frame time. Furthermore, API calls to the internal timer were made to ensure sufficient accuracy and reproducibility of frame timing in order to give smooth panning.
-                    </p>
-                </section>
-                <section class="fig-block" id="code-snip">
-                    <h3>Panning Code Snippet</h3>
-                    <figure>
-                        <img id="code-snip-img" src="./img/Code-Snapshot.PNG" alt="Code Snippet" title="Code Snippet" width="400">
+  <head>
+    <title>My Portfolio - Martin Davis</title>
+    <meta name="author" content="Martin Davis">
+    <meta charset="UTF-8">
+    <meta name="description" content="My-Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Martin J. Davis</h1>
+      <nav>
+          <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content. -->
+          <div role="presentation" id="flexbox-on-contact-page">
+              <ul class="page-nav">
+                  <li class="page-links" >
+                      <a href="https://martindavis3.github.io/Resume/">Home</a>
+                  </li>
+              </ul>
+              <ul class="page-nav">
+                  <li class="page-links">
+                      <a href="./portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="page-links">
+                      <a href="https://martindavis3.github.io/Projematic-FE/" target="_blank">Projematic-FE</a>
+                  </li>
+                  <li class="page-links">
+                      <a href="https://martindavis3.github.io/Molecular-Formula/" target="_blank">Molecular Formula</a>
+                  </li>
+              </ul>
+              <ul class="social-media-nav">
+                  <li class="social-media-links">
+                      <a href="https://www.linkedin.com/in/martin-davis-4964b875/" target="_blank">
+                          <i class="fab fa-linkedin"></i>
+                          <span class="screen-reader-text">Linked In</span>
+                      </a>
+                  </li>
+                  <li class="social-media-links">
+                      <a href="https://github.com/MartinDavis3" target="_blank">
+                          <i class="fab fa-github-square"></i>
+                          <span class="screen-reader-text">Git Hub</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    <main>
+      <article class="my-portfolio">
+        <div role="presentation">
+            <h2 id="top-heading">My Portfolio</h2>
+            <p id="after-top-heading">A brief illustration of some of my work.</p>
+        </div>
+        <section class="text-block">
+          <h2>Full Stack / Back End Projects</h2>
+          <h3>Hiking Club Trip List</h3>
+          <p>Full stack software for trip sign-up webpages for a fictitious hiking club using C#, .NET Core MVC and SQL. Users can add, edit and remove trips or sign-up for or withdraw from existing trips, with only valid options presented, depending on the user and their relation to the trip.</p>
+          <a href="https://github.com/MartinDavis3/Hiking-Club-Trip-List" target="_blank">GitHub Repository</a>
+          <h3>Sunrise, Sunset from an API</h3>
+          <p>A PHP programme which uses a public API to get sunrise, sunset and related information for a city given by the user. This retrieved information is then displayed to the user.</p>
+          <a href="https://github.com/MartinDavis3/Sunrise-Sunset-From-API" target="_blank">GitHub Repository</a>
+        </section>
+        <section class="text-block">
+          <h2>Front End Projects</h2>
+          <h3>Projematic</h3>
+          <p>Fully responsive, interactive front end using SVG graphics, HTML, CSS and JavaScript to display a project management flowchart to specific customer requirements. Clicking on elements of the flowchart shows popups with more information.</p>
+          <a href="https://github.com/MartinDavis3/Projematic-FE" target="_blank">GitHub Repository</a>
+          <a href="https://martindavis3.github.io/Projematic-FE/" target="_blank">GitHub Pages</a>
+          <h3>Molecular Formula</h3>
+          <p>A JavaScript tool to calculate molecular formula, molecular weight and mole and weight fractions from an entered chemical formula.</p>
+          <a href="https://github.com/MartinDavis3/Molecular-Formula" target="_blank">GitHub Repository</a>
+          <a href="https://martindavis3.github.io/Molecular-Formula/" target="_blank">GitHub Pages</a>
+        </section>
+        <section class="text-block">
+            <h2>Combustion CVD</h2>
+            <h3>Introduction</h3>
+            <p>
+                This work was carried out at the University of Salford and was funded by the European Union Fifth Framework Programme.
+            </p>
+            <p>
+                I built new equipment for combustion CVD. This was used to deposit thin films of various metal oxides on different substrates by passing appropriate chemical precursors through a flame.
+            </p>
+            <h3>The Software Challenge</h3>
+            <p>
+                Develop software to allow the user to control the gas flows (propane, oxygen and nitrogen) to the burner with sufficient accuracy and reproducibility to obtain consistent results. It was also important that the user could enter physically and chemically useful parameters such as fuel-oxygen ratio and total gas flow, rather than the less meaningful individual gas flows. To achieve this, digital mass flow controllers (MFCs) were used, connected by a RS-485 interface to a computer running software that I wrote in Visual Basic.
+            </p>
+            <h3>A Problem Encountered</h3>
+            <p>
+                Commands were sent to the MFCs through the interface buffer which then needed to be switched from send to receive in order to read the reply from the MFCs. This switching needed to occur at a precise fraction of a millisecond after the software had sent the command, a delay too short to enable use of the normally available timer in Visual Basic.
+            </p>
+            <h3>The Solution I Found</h3>
+            <p>
+                I used Windows API calls to access the CPU clock, which had the resolution necessary to allow the software to switch the interface buffer with the accuracy and precision required.
+            </p>
+            <cite>
+                <span role="presentation">Reference:</span> Growth of Thin Films of Molybdenum and Tungsten Oxides by Combustion Chemical Vapour Deposition using Aqueous Precursor Solutions. M. J. Davis, G. Benito, D. W. Sheel, M. E. Pemble, Adv. Mater., Chem. Vap. Deposition, 2004, 10, 29.
+            </cite>
+        </section>
+        <section class="fig-block" id="ccvd">
+            <h3>The Combustion CVD Rig</h3>
+            <figure>
+                <img id="ccvd-rig" src="./img/CCVD-Rig.jpg" alt="The combustion CVD rig" Title="Combution CVD Rig" width="400">
+                <img id="mfcs" src="./img/CCVD-MFCs.jpg" alt="The MFCs" Title="MFCs" width="400">
+                <video autoplay loop src="./video/burner.mp4" muted></video>
+                <figcaption>
+                    The combustion CVD rig showing the user input screen. Insets show the MFCs behind the panel and a video of the flame and substrate carriage.
+                </figcaption>
+            </figure>
+        </section>
+        <section class="text-block">
+            <h2>Spectroscopic Monitoring of a Chemical Reactor</h2>
+            <h3>Introduction</h3>
+            <p>
+                This work was carried out at the University of Salford and was funded by the European Union BriteEuram Programme.
+            </p>
+            <p>
+                A technique known as coherent anti-Stokes Raman scattering (CARS) was used to enable measurement of chemical species concentrations at precise points in a hot reactor. This used a pair of high powered, pulsed lasers together with optical components, photodetectors and signal processing electronics, all interfaced to a computer.
+            </p>
+            <h3>The Software Challenge</h3>
+            <p>
+                Write software to both control the scanning of the laser wavelength and acquire the data from the signal processing electronics, ensuring that synchronisation between wavelength and signal was maintained.
+            </p>
+            <h3>A Problem Encountered</h3>
+            <p>
+                I encountered problems with the RS-232 interface used because the standard was poorly defined and communication between the different pieces of equipment did not work.
+            </p>
+            <h3>The Solution I Found</h3>
+            <p>
+            I used a breakout box on the RS-232 line to determine that a handshake line to one of the pieces of equipment needed to be crossed-over.
+            </p>
+            <cite>
+                <span role="presentation">Reference:</span> In-Situ Monitoring of Atmospheric Pressure Tin Oxide CVD using Coherent anti-Stokes Raman Scattering. M. J. Davis, M. E. Pemble, J. Phys. IV France, 1999, 9, Pr8-49.
+            </cite>
+        </section>
+        <section class="fig-block" id="cars">
+            <h3>The Spectroscopic Monitoring System</h3>
+                <figure>
+                    <img id="cars-sys" src="./img/CARS-Rig.jpg" alt="The CARS system" title="CARS System" width="400">
+                    <img id="las-path" src="./img/CARS-laser-path.jpg" alt="The laser path through the reactor" title="Laser Path" width="400">
                     <figcaption>
-                        A section of the code, showing high priority thread, timing calls and frame buffer use.
+                        The CARS system showing the lasers and signal processing electronics. The inset shows the laser path in the reactor.
                     </figcaption>
-                    </figure>
-               </section> 
-            </article>
-            </main>
-        <footer>
-            Martin J. Davis - Portfolio
-        </footer>
-    </body>
+                </figure>
+        </section>
+        <section class="text-block">           
+            <h2>Real Time Panning of Panoramic Images</h2>
+            <h3>Introduction</h3>
+            <p>
+                After a trip to the Grand Canyon and Northern Arizona, I had lots of panoramic images made by stitching together many individual photographs. I found that when trying to show to show these to friends and family, the large aspect ratio meant to images lost their visual impression. While software is available to create videos that show panning across panoramic images, converting lots of images in this way can be time consuming and the resulting videos take up a lot of storage space.
+            </p>   
+            <h3>The Software Challenge</h3>
+            <p>
+                I wrote software in VB.NET to enable a slide show to be made and displayed, where any image with an aspect ratio greater than a certain value would be displayed as an image at full-height and then panned in real time.
+            </p>
+            <h3>A Problem Encountered</h3>
+            <p>
+                I found that panning of a full resolution image was too slow and jerky to be aesthetically acceptable.
+            </p>
+            <h3>The Solution I Found</h3>
+            <p>
+                I ran the code to produce the panning in a separate thread which I assigned a high priority. Additionally, obtaining the correct part of the image required for each frame, which is the slowest part of the process, was done in the time between frames, copying it to a temporary buffer. This buffer could then be quickly transferred to the screen at the correct frame time. Furthermore, API calls to the internal timer were made to ensure sufficient accuracy and reproducibility of frame timing in order to give smooth panning.
+            </p>
+        </section>
+        <section class="fig-block" id="code-snip">
+            <h3>Panning Code Snippet</h3>
+            <figure>
+                <img id="code-snip-img" src="./img/Code-Snapshot.PNG" alt="Code Snippet" title="Code Snippet" width="400">
+            <figcaption>
+                A section of the code, showing high priority thread, timing calls and frame buffer use.
+            </figcaption>
+            </figure>
+        </section> 
+      </article>
+    </main>
+    <footer>
+        Martin J. Davis - Portfolio
+    </footer>
+  </body>
 </html>
