@@ -287,11 +287,19 @@ label span{
 	background-color: white;
 }
 
-.my-portfolio p {
+.text-block p {
 	margin-bottom: 16px;
 }
 
-.my-portfolio a {
+.projects-block h3 {
+	margin-top: 24px;
+}
+
+.projects-block p {
+	margin-bottom: 8px;
+}
+
+.projects-block a {
     margin-left: 16px;
 }
 
