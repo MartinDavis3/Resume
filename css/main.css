@@ -198,6 +198,14 @@ h3 {
     margin-bottom: 4px;
 }
 
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+    font-style: italic;
+    margin-top: 22px;
+}
+
 footer{
     position: fixed;
     top: auto;
