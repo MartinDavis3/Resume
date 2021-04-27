@@ -144,7 +144,8 @@ article, form {
 
 /* Flex items */
 .skills-item,
-.educ-item {
+.educ-item,
+.additional-item {
     width: 100%;
     background-color: rgb(181, 225, 204);
     margin: 16px;
@@ -485,7 +486,8 @@ label span{
     /* Modify layout of flexbox items on index page */
 
     .skills-item,
-    .educ-item {
+    .educ-item,
+    .additional-item {
         width: calc( ( 100% - 64px) / 2 );
     }
 
@@ -514,7 +516,8 @@ label span{
         width: calc( ( ( 100% - 64px) / 4 ) - 16px )
     }
 
-    .educ-item {
+    .educ-item,
+    .additional-item {
         width: calc( ( 100% - 64px) / 2 );
     }
 
