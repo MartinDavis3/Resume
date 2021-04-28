@@ -172,7 +172,7 @@ h2{
 .link-heading {
     /* Need a lot of padding at the top to ensure heading is not
     obscured by navigation bar when moved to by section link */
-    padding-top: 172px;
+    padding-top: 144px;
 }
 
 #top-heading {
@@ -437,11 +437,11 @@ label span{
 	left: 0%;
 }
 
-@media screen and (min-width: 363px) {
+@media screen and (min-width: 371px) {
     .link-heading {
         /* Reduce padding as
         navigation bar gets less high */
-        padding-top: 152px;
+        padding-top: 118px;
     }    
 }
 
@@ -465,10 +465,10 @@ label span{
     }
 }
 
-@media screen and (min-width: 596px) {
+@media screen and (min-width: 481px) {
 
     .link-heading {
-        padding-top: 104px;
+        padding-top: 96px;
     }    
 
     .my-portfolio figcaption {
@@ -501,7 +501,7 @@ label span{
 
 }
 
-@media screen and (min-width: 1071px) {
+@media screen and (min-width: 840px) {
     .link-heading {
         padding-top: 72px;
     }    
