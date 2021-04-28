@@ -144,7 +144,8 @@ article, form {
 
 /* Flex items */
 .skills-item,
-.educ-item {
+.educ-item,
+.additional-item {
     width: 100%;
     background-color: rgb(181, 225, 204);
     margin: 16px;
@@ -171,7 +172,7 @@ h2{
 .link-heading {
     /* Need a lot of padding at the top to ensure heading is not
     obscured by navigation bar when moved to by section link */
-    padding-top: 172px;
+    padding-top: 144px;
 }
 
 #top-heading {
@@ -204,6 +205,14 @@ summary {
     color: gray;
     font-style: italic;
     margin-top: 22px;
+}
+
+.space-after-paragraph {
+    margin-bottom: 12px;
+}
+
+.space-before-paragraph {
+    margin-top: 12px;
 }
 
 footer{
@@ -428,15 +437,15 @@ label span{
 	left: 0%;
 }
 
-@media screen and (min-width: 363px) {
+@media screen and (min-width: 371px) {
     .link-heading {
         /* Reduce padding as
-        navigation bar gets narrower */
-        padding-top: 152px;
+        navigation bar gets less high */
+        padding-top: 118px;
     }    
 }
 
-@media screen and (min-width: 416px) {
+@media screen and (min-width: 451px) {
 
     .link-heading {
         padding-top: 128px;
@@ -456,10 +465,10 @@ label span{
     }
 }
 
-@media screen and (min-width: 549px) {
+@media screen and (min-width: 481px) {
 
     .link-heading {
-        padding-top: 104px;
+        padding-top: 96px;
     }    
 
     .my-portfolio figcaption {
@@ -485,13 +494,14 @@ label span{
     /* Modify layout of flexbox items on index page */
 
     .skills-item,
-    .educ-item {
+    .educ-item,
+    .additional-item {
         width: calc( ( 100% - 64px) / 2 );
     }
 
 }
 
-@media screen and (min-width: 986px) {
+@media screen and (min-width: 840px) {
     .link-heading {
         padding-top: 72px;
     }    
@@ -514,7 +524,8 @@ label span{
         width: calc( ( ( 100% - 64px) / 4 ) - 16px )
     }
 
-    .educ-item {
+    .educ-item,
+    .additional-item {
         width: calc( ( 100% - 64px) / 2 );
     }
 
