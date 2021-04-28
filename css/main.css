@@ -207,6 +207,14 @@ summary {
     margin-top: 22px;
 }
 
+.space-after-paragraph {
+    margin-bottom: 12px;
+}
+
+.space-before-paragraph {
+    margin-top: 12px;
+}
+
 footer{
     position: fixed;
     top: auto;
@@ -432,12 +440,12 @@ label span{
 @media screen and (min-width: 363px) {
     .link-heading {
         /* Reduce padding as
-        navigation bar gets narrower */
+        navigation bar gets less high */
         padding-top: 152px;
     }    
 }
 
-@media screen and (min-width: 416px) {
+@media screen and (min-width: 451px) {
 
     .link-heading {
         padding-top: 128px;
@@ -457,7 +465,7 @@ label span{
     }
 }
 
-@media screen and (min-width: 549px) {
+@media screen and (min-width: 596px) {
 
     .link-heading {
         padding-top: 104px;
@@ -493,7 +501,7 @@ label span{
 
 }
 
-@media screen and (min-width: 986px) {
+@media screen and (min-width: 1071px) {
     .link-heading {
         padding-top: 72px;
     }    
