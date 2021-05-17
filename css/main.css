@@ -437,6 +437,15 @@ label span{
 	left: 0%;
 }
 
+/*Publications*/
+.journal-name {
+    font-style: italic;
+}
+
+.journal-volume {
+    font-weight: bold;
+}
+
 @media screen and (min-width: 371px) {
     .link-heading {
         /* Reduce padding as
