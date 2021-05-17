@@ -36,6 +36,11 @@ ul {
     list-style-type: disc;
 }
 
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
 .level-2-list {
     list-style-type: circle;
 }
