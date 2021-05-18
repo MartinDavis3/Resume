@@ -36,16 +36,6 @@ ul {
     list-style-type: disc;
 }
 
-sub {
-    vertical-align: sub;
-    font-size: smaller;
-}
-
-sup {
-    vertical-align: super;
-    font-size: smaller;
-}
-
 .level-2-list {
     list-style-type: circle;
 }
@@ -448,6 +438,27 @@ label span{
 }
 
 /*Publications*/
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+    /* Line height of zero stops the subscript from affecting the line spacing */
+    line-height: 0;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+    line-height: 0;
+}
+
+.publication-title {
+    line-height: 22px;
+    margin-bottom: 3px;
+    font-weight:bold;
+    color: rgb(64,64,64);
+}
+
 .journal-name {
     font-style: italic;
 }
