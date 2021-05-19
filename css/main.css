@@ -439,6 +439,10 @@ label span{
 
 /*Publications*/
 
+#publications-heading {
+    padding-top: 96px;
+}
+
 sub {
     vertical-align: sub;
     font-size: smaller;
@@ -467,12 +471,26 @@ sup {
     font-weight: bold;
 }
 
-@media screen and (min-width: 371px) {
-    .link-heading {
-        /* Reduce padding as
-        navigation bar gets less high */
-        padding-top: 118px;
+
+@media screen and (min-width: 380px) {
+    /* Reduce padding as navigation bar gets less high */
+
+    #publications-heading {
+        padding-top: 72px;
     }    
+    
+    #top-heading {
+         padding-top: 40px;
+    }
+
+}
+
+@media screen and (min-width: 406px) {
+
+    .link-heading {
+        padding-top: 118px;
+    }
+
 }
 
 @media screen and (min-width: 451px) {
@@ -488,23 +506,20 @@ sup {
 
 }
 
-@media screen and (min-width: 477px) {
-    #top-heading {
-        /* Padding needed for fixed for title and nav bar */
-        padding-top: 40px;
-    }
-}
-
 @media screen and (min-width: 481px) {
-
-    .link-heading {
-        padding-top: 96px;
-    }    
 
     .my-portfolio figcaption {
         font-size: 16px;
         line-height: 20px;
     }
+
+}
+
+@media screen and (min-width: 526px) {
+
+    .link-heading {
+        padding-top: 96px;
+    }    
 
 }
 
@@ -531,10 +546,12 @@ sup {
 
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 947px) {
+
     .link-heading {
         padding-top: 72px;
-    }    
+    }
+        
 }
 
 /* Desktop */
